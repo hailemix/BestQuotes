@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,33 +22,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CsG-xr-E36">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CsG-xr-E36">
+                                <rect key="frame" x="0.0" y="44" width="413" height="692"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nK4-fs-cd5">
-                                    <size key="itemSize" width="170" height="170"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="nK4-fs-cd5">
+                                    <size key="itemSize" width="190" height="190"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="collectionCell" id="8Fn-Jl-9w0" customClass="MyCollectionViewCell" customModule="BestQuotes" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="0.0" width="170" height="170"/>
+                                        <rect key="frame" x="10" y="0.0" width="190" height="190"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gaw-Gl-APt">
-                                                    <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                                    <rect key="frame" x="0.0" y="19" width="190" height="171"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="Gaw-Gl-APt" firstAttribute="top" secondItem="8Fn-Jl-9w0" secondAttribute="top" id="SPe-9d-GoO"/>
-                                            <constraint firstAttribute="trailing" secondItem="Gaw-Gl-APt" secondAttribute="trailing" id="f0C-eV-lgB"/>
-                                            <constraint firstAttribute="bottom" secondItem="Gaw-Gl-APt" secondAttribute="bottom" id="fqt-45-4k4"/>
-                                            <constraint firstItem="Gaw-Gl-APt" firstAttribute="leading" secondItem="8Fn-Jl-9w0" secondAttribute="leading" id="i1P-YH-IGq"/>
+                                            <constraint firstAttribute="trailing" secondItem="Gaw-Gl-APt" secondAttribute="trailing" id="3ma-Dx-VhC"/>
+                                            <constraint firstItem="Gaw-Gl-APt" firstAttribute="leading" secondItem="8Fn-Jl-9w0" secondAttribute="leading" id="6vx-LR-vUI"/>
+                                            <constraint firstItem="Gaw-Gl-APt" firstAttribute="top" secondItem="8Fn-Jl-9w0" secondAttribute="topMargin" constant="11" id="BaD-xj-JZ7"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="Gaw-Gl-APt" secondAttribute="bottom" constant="-8" id="z1U-xz-zD9"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="myImage" destination="Gaw-Gl-APt" id="PQb-sr-IvX"/>
@@ -58,10 +59,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="CsG-xr-E36" secondAttribute="trailing" id="4av-qc-hjH"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CsG-xr-E36" secondAttribute="bottom" id="CHK-Zx-myh"/>
-                            <constraint firstItem="CsG-xr-E36" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YjK-xh-14v"/>
-                            <constraint firstItem="CsG-xr-E36" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eKg-a6-hdo"/>
+                            <constraint firstItem="CsG-xr-E36" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5eL-9z-bLt"/>
+                            <constraint firstItem="CsG-xr-E36" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="8EV-w2-hdd"/>
+                            <constraint firstItem="CsG-xr-E36" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CXz-Jh-Iom"/>
+                            <constraint firstItem="CsG-xr-E36" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="44" id="VMj-5p-EEP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Best World Quotes" id="IVG-Rd-qzz"/>

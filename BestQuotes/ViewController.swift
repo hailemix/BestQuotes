@@ -11,9 +11,13 @@ import UIKit
 class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout{
 
     @IBOutlet weak var MyCollectionView: UICollectionView!
+    
+    var screenSize : CGRect!
+    var screenWidth: CGFloat!
+    var screenHeight : CGFloat!
 
 
-    var images = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n"]
+    var images = ["a","b","c","d","e","f","g","h","i","j"]
     let zCellIdentifier = "collectionCell"
     
     
@@ -26,9 +30,15 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         self.MyCollectionView.delegate = self
         self.MyCollectionView.dataSource = self
         
+        screenSize = UIScreen.main.bounds
+        screenWidth = screenSize.width
+        screenHeight = screenSize.height
+        
+        let layout : UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: (screenWidth/3)-1, height :(screenHeight/3+1))
         
         
-     
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,17 +46,23 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         // Dispose of any resources that can be recreated.
     }
     
+   
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     
     {
         return images.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+  /*
+ func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     
-        return CGSize(width:view.frame.width/2, height:view.frame.height/3)
+        return CGSize(width:view.frame.width/3, height:view.frame.height/3)
         
     }
+ 
+ */
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: zCellIdentifier, for: indexPath) as! MyCollectionViewCell
