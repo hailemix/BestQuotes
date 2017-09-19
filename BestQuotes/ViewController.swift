@@ -34,8 +34,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         screenWidth = screenSize.width
         screenHeight = screenSize.height
         
-        let layout : UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize
+        
         
         
 
@@ -62,6 +61,17 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         cell.myImage.image = UIImage(named: images[indexPath.row])
         return cell
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+  
+        // TODO create sectionInsets
+        
+        return CGSize(width:(screenWidth/2-4),height: (screenHeight/3-3))
+    }
+    
+    
   
 
 }
