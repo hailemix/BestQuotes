@@ -35,7 +35,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         screenHeight = screenSize.height
         
         let layout : UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: (screenWidth/3)-1, height :(screenHeight/3+1))
+        layout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize
         
         
 
@@ -54,23 +54,15 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         return images.count
     }
     
-  /*
- func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    
-        return CGSize(width:view.frame.width/3, height:view.frame.height/3)
-        
-    }
- 
- */
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: zCellIdentifier, for: indexPath) as! MyCollectionViewCell
-        
+
         cell.myImage.image = UIImage(named: images[indexPath.row])
         return cell
     }
-    
+  
 
 }
 

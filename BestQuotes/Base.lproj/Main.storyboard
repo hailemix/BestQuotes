@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1611" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dt8-wa-SBo">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,21 +19,21 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CsG-xr-E36">
-                                <rect key="frame" x="0.0" y="44" width="413" height="692"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="nK4-fs-cd5">
                                     <size key="itemSize" width="190" height="190"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="collectionCell" id="8Fn-Jl-9w0" customClass="MyCollectionViewCell" customModule="BestQuotes" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="0.0" width="190" height="190"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="collectionCell" id="8Fn-Jl-9w0" customClass="MyCollectionViewCell" customModule="BestQuotes" customModuleProvider="target">
+                                        <rect key="frame" x="93" y="0.0" width="190" height="190"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
@@ -59,10 +59,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="CsG-xr-E36" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5eL-9z-bLt"/>
-                            <constraint firstItem="CsG-xr-E36" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="8EV-w2-hdd"/>
-                            <constraint firstItem="CsG-xr-E36" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CXz-Jh-Iom"/>
-                            <constraint firstItem="CsG-xr-E36" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="44" id="VMj-5p-EEP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CsG-xr-E36" secondAttribute="bottom" id="6kZ-t5-m4f"/>
+                            <constraint firstAttribute="trailing" secondItem="CsG-xr-E36" secondAttribute="trailing" id="E71-SL-exg"/>
+                            <constraint firstItem="CsG-xr-E36" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mAe-up-f9J"/>
+                            <constraint firstItem="CsG-xr-E36" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="q2C-TY-6Cl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Best World Quotes" id="IVG-Rd-qzz"/>
