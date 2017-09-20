@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1611" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dt8-wa-SBo">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,36 +19,36 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CsG-xr-E36">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="nK4-fs-cd5">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="nK4-fs-cd5">
                                     <size key="itemSize" width="154" height="190"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="6" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="collectionCell" id="8Fn-Jl-9w0" customClass="MyCollectionViewCell" customModule="BestQuotes" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="154" height="190"/>
+                                        <rect key="frame" x="81" y="10" width="154" height="190"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="154" height="190"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gaw-Gl-APt">
-                                                    <rect key="frame" x="0.0" y="19" width="154" height="171"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="154" height="185"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="Gaw-Gl-APt" secondAttribute="trailing" id="3ma-Dx-VhC"/>
-                                            <constraint firstItem="Gaw-Gl-APt" firstAttribute="leading" secondItem="8Fn-Jl-9w0" secondAttribute="leading" id="6vx-LR-vUI"/>
-                                            <constraint firstItem="Gaw-Gl-APt" firstAttribute="top" secondItem="8Fn-Jl-9w0" secondAttribute="topMargin" constant="11" id="BaD-xj-JZ7"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="Gaw-Gl-APt" secondAttribute="bottom" constant="-8" id="z1U-xz-zD9"/>
+                                            <constraint firstAttribute="trailing" secondItem="Gaw-Gl-APt" secondAttribute="trailing" id="1dx-Ha-6Hg"/>
+                                            <constraint firstItem="Gaw-Gl-APt" firstAttribute="top" secondItem="8Fn-Jl-9w0" secondAttribute="top" id="5Sc-Aw-7yC"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="Gaw-Gl-APt" secondAttribute="bottom" constant="-3" id="THw-Em-2jc"/>
+                                            <constraint firstItem="Gaw-Gl-APt" firstAttribute="leading" secondItem="8Fn-Jl-9w0" secondAttribute="leading" id="XT1-RR-bJg"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="myImage" destination="Gaw-Gl-APt" id="PQb-sr-IvX"/>
@@ -72,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1055.072463768116" y="122.28260869565219"/>
+            <point key="canvasLocation" x="1053.75" y="121.47887323943662"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nlT-SZ-A1d">

@@ -20,9 +20,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     var images = ["a","b","c","d","e","f","g","h","i","j"]
     let zCellIdentifier = "collectionCell"
     
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -33,11 +31,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         screenSize = UIScreen.main.bounds
         screenWidth = screenSize.width
         screenHeight = screenSize.height
-        
-        
-        
-        
-
+   
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,6 +47,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         return images.count
     }
     
+
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
@@ -63,16 +58,28 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
-  
-        // TODO create sectionInsets
-        
-        return CGSize(width:(screenWidth/2-4),height: (screenHeight/3-3))
+        let myInsets = UIEdgeInsetsMake(2, 2, 2, 2)
+        return (myInsets)
     }
     
-    
   
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width:(screenWidth/2-4),height: (screenHeight/3-4))
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+ 
 
 }
 
