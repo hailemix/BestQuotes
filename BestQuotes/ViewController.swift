@@ -18,12 +18,14 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
 
 
     var images = ["a","b","c","d","e","f","g","h","i","j"]
+ 
+
     let zCellIdentifier = "collectionCell"
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         
         self.MyCollectionView.delegate = self
         self.MyCollectionView.dataSource = self
@@ -39,7 +41,6 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         // Dispose of any resources that can be recreated.
     }
     
-   
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     
@@ -79,7 +80,26 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         return 0
     }
     
- 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-}
+        
+        
+        if(indexPath.row == 0) {
+            
+        let detailViewController = self.storyboard?.instantiateViewController(withIdentifier: "detailOne")
+        self.navigationController?.pushViewController(detailViewController!, animated: true)
+            
+        }
+        
+        
+        
+    
+    }
+        
+   
+   
+        
+    }
+
+
 
