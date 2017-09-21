@@ -62,7 +62,9 @@ class detailOne : UIViewController,UIScrollViewDelegate {
         
     
     }
- 
+
+    
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let pageWidth : CGFloat = scrollView.frame.width
         let currentPage : CGFloat = floor((scrollView.contentOffset.x - pageWidth/2)/pageWidth) + 1
