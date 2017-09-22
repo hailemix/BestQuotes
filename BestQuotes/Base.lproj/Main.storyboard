@@ -110,10 +110,10 @@
                                 <rect key="frame" x="0.0" y="699" width="414" height="37"/>
                                 <color key="pageIndicatorTintColor" red="0.059823975090000002" green="0.070733173080000003" blue="0.031541804899999998" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v2k-sX-ll3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="success" translatesAutoresizingMaskIntoConstraints="NO" id="v2k-sX-ll3">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krj-HL-R0y">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krj-HL-R0y">
                                 <rect key="frame" x="20" y="170" width="374" height="343"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="343" id="tQK-tw-Eyc"/>
@@ -144,6 +144,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="0yF-Yw-bBQ"/>
                     <connections>
+                        <outlet property="imageView" destination="v2k-sX-ll3" id="9IW-Yu-fJ7"/>
                         <outlet property="pageControl" destination="keN-Tf-QfJ" id="nF2-yo-gMU"/>
                         <outlet property="scrollView" destination="SkN-Gs-NSp" id="Dar-pZ-8Qi"/>
                         <outlet property="textView" destination="krj-HL-R0y" id="RDr-8q-Zml"/>
@@ -172,4 +173,7 @@
             <point key="canvasLocation" x="50" y="124"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="success" width="638" height="422"/>
+    </resources>
 </document>
