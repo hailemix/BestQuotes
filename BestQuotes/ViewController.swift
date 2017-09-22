@@ -88,7 +88,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             
         let detailViewController = self.storyboard?.instantiateViewController(withIdentifier: "detailOne")
         self.navigationController?.pushViewController(detailViewController!, animated: true)
-            
+        
         }
         
         
