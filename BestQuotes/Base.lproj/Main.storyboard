@@ -78,7 +78,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ERQ-eY-MW6">
             <objects>
-                <navigationController id="pbJ-K8-LnJ" sceneMemberID="viewController">
+                <navigationController modalTransitionStyle="flipHorizontal" id="pbJ-K8-LnJ" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0gM-6A-uAW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

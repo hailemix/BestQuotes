@@ -22,9 +22,11 @@ class detailOne : UIViewController,UIScrollViewDelegate {
     
     override func viewDidLoad() {
         
+        
+     self.imageView.addSubview(textView)
+
         super.viewDidLoad()
         
-      
         self.scrollView.frame = CGRect(x:0,y:0,width:self.view.frame.width,height:self.view.frame.height)
         let scrollViewWidth : CGFloat = self.scrollView.frame.width
         let scrollViewHeight : CGFloat = self.scrollView.frame.height
@@ -71,7 +73,7 @@ class detailOne : UIViewController,UIScrollViewDelegate {
         
         self.pageControl.currentPage = Int(currentPage)
         
-        self.imageView.addSubview(textView)
+       
         
         textView.textAlignment = .center
   
