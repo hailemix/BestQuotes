@@ -40,6 +40,8 @@ class detailOne : UIViewController,UIScrollViewDelegate {
         textView.text = dis[0]
         textView.textAlignment = .center
         
+       
+   
         
         let imgTwo = UIScrollView(frame: CGRect(x:scrollViewWidth,y:0,width:scrollViewWidth,height:scrollViewHeight))
         
@@ -54,8 +56,6 @@ class detailOne : UIViewController,UIScrollViewDelegate {
         self.scrollView.addSubview(imgTwo)
         self.scrollView.addSubview(imgThree)
         self.scrollView.addSubview(imgFour)
-       
-        
         self.scrollView.contentSize = CGSize(width:self.scrollView.frame.width*4,height:self.scrollView.frame.height)
         self.scrollView.delegate = self
         self.pageControl.currentPage = 0
@@ -64,41 +64,56 @@ class detailOne : UIViewController,UIScrollViewDelegate {
         
     
     }
+    
+ 
 
-    
-    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let pageWidth : CGFloat = scrollView.frame.width
         let currentPage : CGFloat = floor((scrollView.contentOffset.x - pageWidth/2)/pageWidth) + 1
         
         self.pageControl.currentPage = Int(currentPage)
+ 
+        textView.textAlignment = .center
         
        
-        
-        textView.textAlignment = .center
   
-        if(pageControl.currentPage==0) {
-            
-          
+        if(pageControl.currentPage == 0) {
+
+      
             textView.text = dis[0]
-            
-     
-        } else if(pageControl.currentPage==1) {
-            
+ 
+        }  else if(pageControl.currentPage == 1) {
             
             textView.text = dis[1]
-            
-            
-        } else if(pageControl.currentPage==2){
+     
+        } else if(pageControl.currentPage == 2){
             
             textView.text = dis[2]
             
-        } else if (pageControl.currentPage==3){
+        } else if (pageControl.currentPage == 3){
         
             textView.text = dis[3]
         }
         
         
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        fadeOut()
+        fadeIn()
+    }
+    
+
+
+    func fadeIn() {
+        
+        UITextView.animate(withDuration: 0.4,delay:0.2,options:[.transitionCurlUp],animations: {self.textView.alpha = 1.0},completion : nil)
+        
+    }
+    
+    func fadeOut () {
+        
+        UITextView.animate(withDuration: 0.2,delay:0.2,options:[.transitionFlipFromRight],animations: {self.textView.alpha = 0 }, completion: nil)
     }
     
    
