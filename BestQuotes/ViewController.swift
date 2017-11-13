@@ -42,6 +42,9 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     }
     
     
+    
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     
     {
@@ -83,21 +86,16 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
         
-        
         if(indexPath.row == 0) {
             
         let detailViewController = self.storyboard?.instantiateViewController(withIdentifier: "detailOne")
         self.navigationController?.pushViewController(detailViewController!, animated: true)
+            
         
         }
-        
-        
-        
-    
+  
     }
-        
-   
-   
+
         
     }
 

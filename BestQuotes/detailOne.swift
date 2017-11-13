@@ -107,13 +107,13 @@ class detailOne : UIViewController,UIScrollViewDelegate {
 
     func fadeIn() {
         
-        UITextView.animate(withDuration: 0.4,delay:0.2,options:[.curveEaseIn],animations: {self.textView.alpha = 1.0;self.textView.frame.origin.y -= 10 },completion : nil)
+        UITextView.animate(withDuration: 0.2, delay:0.10,options:[.curveEaseIn],animations: {self.textView.alpha = 1.0;  self.textView.frame.origin.y -= 20 },completion : nil)
         
     }
     
     func fadeOut () {
         
-        UITextView.animate(withDuration: 0.2,delay:0.2,options:[.curveEaseOut],animations: {self.textView.alpha = 0;self.textView.frame.origin.y += 10 }, completion: nil)
+        UITextView.animate(withDuration: 0.2, delay:0.10,options:[.curveEaseOut],animations: {self.textView.alpha = 0.005; self.textView.frame.origin.y += 20 }, completion: nil)
     }
     
    
