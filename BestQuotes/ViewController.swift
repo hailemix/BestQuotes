@@ -8,13 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout{
+class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout,UIViewControllerTransitioningDelegate{
 
     @IBOutlet weak var MyCollectionView: UICollectionView!
     
     var screenSize : CGRect!
     var screenWidth: CGFloat!
     var screenHeight : CGFloat!
+    let transition = TransitionAnimation()
+    var backDurationTime: Double = 1.0
+  
 
 
     var images = ["a","b","c","d","e","f","g","h","i","j"]
@@ -22,6 +25,8 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
 
     let zCellIdentifier = "collectionCell"
     
+    
+ 
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +38,8 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         screenSize = UIScreen.main.bounds
         screenWidth = screenSize.width
         screenHeight = screenSize.height
+        
+        
    
     }
 
@@ -41,9 +48,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
-    
+
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     
@@ -88,14 +93,30 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         
         if(indexPath.row == 0) {
             
-        let detailViewController = self.storyboard?.instantiateViewController(withIdentifier: "detailOne")
-        self.navigationController?.pushViewController(detailViewController!, animated: true)
+            let detailViewController = self.storyboard?.instantiateViewController(withIdentifier: "detailOne") as! detailOne
+            let navigationViewer = UINavigationController (rootViewController: detailViewController)
+            navigationViewer.transitioningDelegate = self
+            navigationViewer.navigationBar.barTintColor = UIColor.black
+            present(navigationViewer, animated: true,completion: nil)
             
+ }
         
-        }
   
     }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return transition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return nil
+    }
+    
+    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){
+        
+    }
 
+    
         
     }
 

@@ -68,7 +68,7 @@
                     <navigationItem key="navigationItem" title="Best World Quotes" id="IVG-Rd-qzz"/>
                     <connections>
                         <outlet property="MyCollectionView" destination="CsG-xr-E36" id="VJA-hI-NgN"/>
-                        <segue destination="pbJ-K8-LnJ" kind="show" identifier="detailOne" id="qxk-kX-H6W"/>
+                        <segue destination="pbJ-K8-LnJ" kind="presentation" identifier="zDetailPresenter" id="lj8-2k-Xha"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -94,7 +94,7 @@
         <!--detailOne-->
         <scene sceneID="gZy-t0-6uE">
             <objects>
-                <viewController restorationIdentifier="detailOne" storyboardIdentifier="detailOne" title="detailOne" automaticallyAdjustsScrollViewInsets="NO" id="A5c-Q6-cFp" customClass="detailOne" customModule="BestQuotes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="detailOne" storyboardIdentifier="detailOne" title="detailOne" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" modalPresentationStyle="pageSheet" id="A5c-Q6-cFp" customClass="detailOne" customModule="BestQuotes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OMe-4Q-N12"/>
                         <viewControllerLayoutGuide type="bottom" id="c9v-iY-RdW"/>
@@ -142,7 +142,13 @@
                             <constraint firstItem="SkN-Gs-NSp" firstAttribute="trailing" secondItem="keN-Tf-QfJ" secondAttribute="trailing" id="zd8-AH-n6a"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="0yF-Yw-bBQ"/>
+                    <navigationItem key="navigationItem" id="0yF-Yw-bBQ">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="kd7-rw-TUB">
+                            <connections>
+                                <segue destination="iuI-EF-rbG" kind="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="gsp-l2-zl1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="v2k-sX-ll3" id="9IW-Yu-fJ7"/>
                         <outlet property="pageControl" destination="keN-Tf-QfJ" id="nF2-yo-gMU"/>
@@ -151,6 +157,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y60-rO-t4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="iuI-EF-rbG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2857.971014492754" y="119.83695652173914"/>
         </scene>
