@@ -16,8 +16,10 @@ class detailOne : UIViewController,UIScrollViewDelegate {
     @IBOutlet var pageControl: UIPageControl!
     @IBOutlet var textView: UITextView!
     
+    @IBOutlet weak var backButton: UIBarButtonItem!
+    @IBOutlet weak var shareBut: UIButton!
     
-    var dis = ["This is the way...Only the Lord Jesus","You're the only one that I can live for ","Nothing is more beautiful than Jesus","owowowowow","never left down at your feet","My savior....wowowowwo"]
+    var dis = ["Once Upon I looked upon the cross were you died","I'm humbled by your mercy and I'm broken inside","Once again I thank you","Once Again I pour out my life"]
 
     
     override func viewDidLoad() {
@@ -26,6 +28,9 @@ class detailOne : UIViewController,UIScrollViewDelegate {
      self.imageView.addSubview(textView)
 
         super.viewDidLoad()
+        
+        
+        
         
         self.scrollView.frame = CGRect(x:0,y:0,width:self.view.frame.width,height:self.view.frame.height)
         let scrollViewWidth : CGFloat = self.scrollView.frame.width
@@ -62,10 +67,39 @@ class detailOne : UIViewController,UIScrollViewDelegate {
         self.pageControl.isHidden = true
         self.pageControl.numberOfPages = 4
         
+  
+        
     
     }
     
  
+    @IBAction func shareButton(_ sender: UIButton) {
+        
+        
+
+            if(pageControl.currentPage == 0) {
+                
+                let shareOne  = dis[0]
+                
+                let activityViewController : UIActivityViewController = UIActivityViewController (activityItems:[shareOne] ,applicationActivities: nil)
+                activityViewController.popoverPresentationController?.sourceView = (sender)
+                activityViewController.excludedActivityTypes = [
+                
+                UIActivityType.assignToContact,UIActivityType.saveToCameraRoll,UIActivityType.copyToPasteboard ]
+                self.present(activityViewController,animated:true,completion:nil)
+              
+            }
+        
+        if(pageControl.currentPage == 1) {
+        
+            let shareTwo = dis[1]
+            let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [shareTwo],applicationActivities: nil)
+            activityViewController.popoverPresentationController?.sourceView = (sender)
+            activityViewController.excludedActivityTypes = [UIActivityType.assignToContact,UIActivityType.saveToCameraRoll,UIActivityType.copyToPasteboard]
+            self.present(activityViewController,animated:true,completion:nil)
+        }
+     
+    }
 
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let pageWidth : CGFloat = scrollView.frame.width
@@ -74,9 +108,8 @@ class detailOne : UIViewController,UIScrollViewDelegate {
         self.pageControl.currentPage = Int(currentPage)
  
         textView.textAlignment = .center
-        
-       
-  
+        shareBut.isHidden = false
+   
         if(pageControl.currentPage == 0) {
 
       
@@ -97,8 +130,16 @@ class detailOne : UIViewController,UIScrollViewDelegate {
         
         
     }
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+       
+        shareBut.isHidden = true
+        
+        
+    }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView)
+    
+    {
         fadeOut()
         fadeIn()
     }
@@ -115,6 +156,8 @@ class detailOne : UIViewController,UIScrollViewDelegate {
         
         UITextView.animate(withDuration: 0.2, delay:0.10,options:[.curveEaseOut],animations: {self.textView.alpha = 0.005; self.textView.frame.origin.y += 20 }, completion: nil)
     }
+    
+    
     
    
 

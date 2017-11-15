@@ -113,10 +113,26 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="success" translatesAutoresizingMaskIntoConstraints="NO" id="v2k-sX-ll3">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ru6-I8-4nZ">
+                                <rect key="frame" x="20" y="648" width="80" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyb-Ui-hZW">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="0.9921000599861145" green="0.99610286951065063" blue="0.99599844217300415" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.84747437800000003" green="1" blue="0.43573128290000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shareButton:" destination="A5c-Q6-cFp" eventType="touchUpInside" id="IPL-9Z-ODr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krj-HL-R0y">
                                 <rect key="frame" x="20" y="170" width="374" height="343"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="343" id="tQK-tw-Eyc"/>
+                                    <constraint firstAttribute="height" constant="343" id="Y9K-UO-IrM"/>
                                 </constraints>
                                 <color key="textColor" red="0.90812785689999997" green="0.94645584240000002" blue="0.96707255469999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
@@ -126,20 +142,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="bottom" secondItem="c9v-iY-RdW" secondAttribute="top" id="3za-Xu-Wp3"/>
-                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="leading" secondItem="ctM-1a-f9I" secondAttribute="leading" id="MaR-OC-vUQ"/>
-                            <constraint firstItem="krj-HL-R0y" firstAttribute="centerX" secondItem="keN-Tf-QfJ" secondAttribute="centerX" id="Pjb-VF-Hst"/>
-                            <constraint firstAttribute="trailing" secondItem="v2k-sX-ll3" secondAttribute="trailing" id="RdR-rd-swR"/>
-                            <constraint firstItem="krj-HL-R0y" firstAttribute="top" secondItem="OMe-4Q-N12" secondAttribute="bottom" constant="106" id="VL0-bs-rsI"/>
-                            <constraint firstItem="v2k-sX-ll3" firstAttribute="leading" secondItem="keN-Tf-QfJ" secondAttribute="leading" id="VgL-gb-zrg"/>
-                            <constraint firstItem="krj-HL-R0y" firstAttribute="leading" secondItem="ctM-1a-f9I" secondAttribute="leadingMargin" id="Vkb-19-Fpb"/>
-                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="top" secondItem="v2k-sX-ll3" secondAttribute="top" id="Vqc-Du-BdU"/>
-                            <constraint firstItem="keN-Tf-QfJ" firstAttribute="bottom" secondItem="c9v-iY-RdW" secondAttribute="top" id="eUI-0U-dLi"/>
-                            <constraint firstItem="v2k-sX-ll3" firstAttribute="trailing" secondItem="SkN-Gs-NSp" secondAttribute="trailing" id="egu-RC-csD"/>
-                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="top" secondItem="ctM-1a-f9I" secondAttribute="top" id="hz8-lV-4oz"/>
-                            <constraint firstItem="v2k-sX-ll3" firstAttribute="bottom" secondItem="c9v-iY-RdW" secondAttribute="top" id="k7k-AE-Edk"/>
-                            <constraint firstItem="v2k-sX-ll3" firstAttribute="leading" secondItem="SkN-Gs-NSp" secondAttribute="leading" id="xeW-Ss-jY1"/>
-                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="trailing" secondItem="keN-Tf-QfJ" secondAttribute="trailing" id="zd8-AH-n6a"/>
+                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="trailing" secondItem="v2k-sX-ll3" secondAttribute="trailing" id="0ee-hT-qKp"/>
+                            <constraint firstItem="krj-HL-R0y" firstAttribute="leading" secondItem="ctM-1a-f9I" secondAttribute="leadingMargin" id="4dn-08-b9y"/>
+                            <constraint firstItem="v2k-sX-ll3" firstAttribute="leading" secondItem="keN-Tf-QfJ" secondAttribute="leading" id="5WC-HL-YEC"/>
+                            <constraint firstItem="krj-HL-R0y" firstAttribute="top" secondItem="OMe-4Q-N12" secondAttribute="bottom" constant="106" id="8lQ-o9-bzx"/>
+                            <constraint firstItem="keN-Tf-QfJ" firstAttribute="bottom" secondItem="c9v-iY-RdW" secondAttribute="top" id="GYT-0I-etT"/>
+                            <constraint firstItem="keN-Tf-QfJ" firstAttribute="top" secondItem="ru6-I8-4nZ" secondAttribute="bottom" constant="6" id="Ior-Ru-AJP"/>
+                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="top" secondItem="ctM-1a-f9I" secondAttribute="top" id="Jls-tg-FsW"/>
+                            <constraint firstItem="v2k-sX-ll3" firstAttribute="bottom" secondItem="c9v-iY-RdW" secondAttribute="top" id="TkO-xa-0E4"/>
+                            <constraint firstItem="v2k-sX-ll3" firstAttribute="leading" secondItem="ctM-1a-f9I" secondAttribute="leading" id="YbI-Ro-WSa"/>
+                            <constraint firstItem="krj-HL-R0y" firstAttribute="centerX" secondItem="keN-Tf-QfJ" secondAttribute="centerX" id="aDp-RB-B6O"/>
+                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="trailing" secondItem="keN-Tf-QfJ" secondAttribute="trailing" id="f0U-69-zMx"/>
+                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="leading" secondItem="v2k-sX-ll3" secondAttribute="leading" id="fdJ-n8-x3I"/>
+                            <constraint firstAttribute="trailing" secondItem="v2k-sX-ll3" secondAttribute="trailing" id="pot-Rk-Y4V"/>
+                            <constraint firstItem="krj-HL-R0y" firstAttribute="leading" secondItem="ru6-I8-4nZ" secondAttribute="leading" id="q3J-G3-CQy"/>
+                            <constraint firstItem="v2k-sX-ll3" firstAttribute="top" secondItem="SkN-Gs-NSp" secondAttribute="top" id="u9P-V7-gQq"/>
+                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="bottom" secondItem="c9v-iY-RdW" secondAttribute="top" id="yKs-s2-zgq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0yF-Yw-bBQ">
@@ -150,9 +168,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="backButton" destination="kd7-rw-TUB" id="9hX-ha-M6Q"/>
                         <outlet property="imageView" destination="v2k-sX-ll3" id="9IW-Yu-fJ7"/>
                         <outlet property="pageControl" destination="keN-Tf-QfJ" id="nF2-yo-gMU"/>
                         <outlet property="scrollView" destination="SkN-Gs-NSp" id="Dar-pZ-8Qi"/>
+                        <outlet property="shareBut" destination="jyb-Ui-hZW" id="MPd-d5-jHE"/>
                         <outlet property="textView" destination="krj-HL-R0y" id="RDr-8q-Zml"/>
                     </connections>
                 </viewController>
