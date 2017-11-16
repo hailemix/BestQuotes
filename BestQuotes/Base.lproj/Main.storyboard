@@ -112,23 +112,9 @@
                             </pageControl>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="success" translatesAutoresizingMaskIntoConstraints="NO" id="v2k-sX-ll3">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" red="0.99392062425613403" green="0.049695082008838654" blue="0.32055583596229553" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="0.20373919469999999" blue="0.29233046019999998" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ru6-I8-4nZ">
-                                <rect key="frame" x="20" y="648" width="80" height="45"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyb-Ui-hZW">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="45"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                        <state key="normal" title="Button">
-                                            <color key="titleColor" red="0.9921000599861145" green="0.99610286951065063" blue="0.99599844217300415" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="titleShadowColor" red="0.84747437800000003" green="1" blue="0.43573128290000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="shareButton:" destination="A5c-Q6-cFp" eventType="touchUpInside" id="IPL-9Z-ODr"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krj-HL-R0y">
                                 <rect key="frame" x="20" y="170" width="374" height="343"/>
                                 <constraints>
@@ -138,6 +124,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8D-xD-MKA">
+                                <rect key="frame" x="20" y="692" width="36" height="36"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="share"/>
+                                <connections>
+                                    <action selector="share:" destination="A5c-Q6-cFp" eventType="touchUpInside" id="b04-xV-mfI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -146,8 +140,9 @@
                             <constraint firstItem="krj-HL-R0y" firstAttribute="leading" secondItem="ctM-1a-f9I" secondAttribute="leadingMargin" id="4dn-08-b9y"/>
                             <constraint firstItem="v2k-sX-ll3" firstAttribute="leading" secondItem="keN-Tf-QfJ" secondAttribute="leading" id="5WC-HL-YEC"/>
                             <constraint firstItem="krj-HL-R0y" firstAttribute="top" secondItem="OMe-4Q-N12" secondAttribute="bottom" constant="106" id="8lQ-o9-bzx"/>
+                            <constraint firstItem="o8D-xD-MKA" firstAttribute="leading" secondItem="ctM-1a-f9I" secondAttribute="leadingMargin" id="96U-kJ-ePf"/>
+                            <constraint firstItem="c9v-iY-RdW" firstAttribute="top" secondItem="o8D-xD-MKA" secondAttribute="bottom" constant="8" id="9Mv-NH-uDz"/>
                             <constraint firstItem="keN-Tf-QfJ" firstAttribute="bottom" secondItem="c9v-iY-RdW" secondAttribute="top" id="GYT-0I-etT"/>
-                            <constraint firstItem="keN-Tf-QfJ" firstAttribute="top" secondItem="ru6-I8-4nZ" secondAttribute="bottom" constant="6" id="Ior-Ru-AJP"/>
                             <constraint firstItem="SkN-Gs-NSp" firstAttribute="top" secondItem="ctM-1a-f9I" secondAttribute="top" id="Jls-tg-FsW"/>
                             <constraint firstItem="v2k-sX-ll3" firstAttribute="bottom" secondItem="c9v-iY-RdW" secondAttribute="top" id="TkO-xa-0E4"/>
                             <constraint firstItem="v2k-sX-ll3" firstAttribute="leading" secondItem="ctM-1a-f9I" secondAttribute="leading" id="YbI-Ro-WSa"/>
@@ -155,13 +150,13 @@
                             <constraint firstItem="SkN-Gs-NSp" firstAttribute="trailing" secondItem="keN-Tf-QfJ" secondAttribute="trailing" id="f0U-69-zMx"/>
                             <constraint firstItem="SkN-Gs-NSp" firstAttribute="leading" secondItem="v2k-sX-ll3" secondAttribute="leading" id="fdJ-n8-x3I"/>
                             <constraint firstAttribute="trailing" secondItem="v2k-sX-ll3" secondAttribute="trailing" id="pot-Rk-Y4V"/>
-                            <constraint firstItem="krj-HL-R0y" firstAttribute="leading" secondItem="ru6-I8-4nZ" secondAttribute="leading" id="q3J-G3-CQy"/>
                             <constraint firstItem="v2k-sX-ll3" firstAttribute="top" secondItem="SkN-Gs-NSp" secondAttribute="top" id="u9P-V7-gQq"/>
                             <constraint firstItem="SkN-Gs-NSp" firstAttribute="bottom" secondItem="c9v-iY-RdW" secondAttribute="top" id="yKs-s2-zgq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0yF-Yw-bBQ">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="kd7-rw-TUB">
+                        <barButtonItem key="leftBarButtonItem" image="home" id="kd7-rw-TUB">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="iuI-EF-rbG" kind="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="gsp-l2-zl1"/>
                             </connections>
@@ -172,7 +167,6 @@
                         <outlet property="imageView" destination="v2k-sX-ll3" id="9IW-Yu-fJ7"/>
                         <outlet property="pageControl" destination="keN-Tf-QfJ" id="nF2-yo-gMU"/>
                         <outlet property="scrollView" destination="SkN-Gs-NSp" id="Dar-pZ-8Qi"/>
-                        <outlet property="shareBut" destination="jyb-Ui-hZW" id="MPd-d5-jHE"/>
                         <outlet property="textView" destination="krj-HL-R0y" id="RDr-8q-Zml"/>
                     </connections>
                 </viewController>
@@ -201,6 +195,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="home" width="36" height="36"/>
+        <image name="share" width="36" height="36"/>
         <image name="success" width="638" height="422"/>
     </resources>
 </document>

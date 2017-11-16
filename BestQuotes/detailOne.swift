@@ -17,7 +17,8 @@ class detailOne : UIViewController,UIScrollViewDelegate {
     @IBOutlet var textView: UITextView!
     
     @IBOutlet weak var backButton: UIBarButtonItem!
-    @IBOutlet weak var shareBut: UIButton!
+   
+    @IBOutlet weak var toolBar: UIToolbar!
     
     var dis = ["Once Upon I looked upon the cross were you died","I'm humbled by your mercy and I'm broken inside","Once again I thank you","Once Again I pour out my life"]
 
@@ -29,7 +30,7 @@ class detailOne : UIViewController,UIScrollViewDelegate {
 
         super.viewDidLoad()
         
-        
+    
         
         
         self.scrollView.frame = CGRect(x:0,y:0,width:self.view.frame.width,height:self.view.frame.height)
@@ -72,23 +73,21 @@ class detailOne : UIViewController,UIScrollViewDelegate {
     
     }
     
- 
-    @IBAction func shareButton(_ sender: UIButton) {
-        
-        
-
+    @IBAction func share(_ sender: UIButton) {
+  
             if(pageControl.currentPage == 0) {
                 
                 let shareOne  = dis[0]
                 
                 let activityViewController : UIActivityViewController = UIActivityViewController (activityItems:[shareOne] ,applicationActivities: nil)
-                activityViewController.popoverPresentationController?.sourceView = (sender)
+                activityViewController.popoverPresentationController?.sourceView = (sender )
                 activityViewController.excludedActivityTypes = [
                 
                 UIActivityType.assignToContact,UIActivityType.saveToCameraRoll,UIActivityType.copyToPasteboard ]
                 self.present(activityViewController,animated:true,completion:nil)
               
             }
+        
         
         if(pageControl.currentPage == 1) {
         
@@ -108,7 +107,7 @@ class detailOne : UIViewController,UIScrollViewDelegate {
         self.pageControl.currentPage = Int(currentPage)
  
         textView.textAlignment = .center
-        shareBut.isHidden = false
+      
    
         if(pageControl.currentPage == 0) {
 
@@ -130,13 +129,8 @@ class detailOne : UIViewController,UIScrollViewDelegate {
         
         
     }
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-       
-        shareBut.isHidden = true
-        
-        
-    }
     
+
     func scrollViewDidScroll(_ scrollView: UIScrollView)
     
     {
@@ -157,8 +151,6 @@ class detailOne : UIViewController,UIScrollViewDelegate {
         UITextView.animate(withDuration: 0.2, delay:0.10,options:[.curveEaseOut],animations: {self.textView.alpha = 0.005; self.textView.frame.origin.y += 20 }, completion: nil)
     }
     
-    
-    
-   
+
 
 }
