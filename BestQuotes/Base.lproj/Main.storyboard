@@ -9,6 +9,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="jiret.ttf">
+            <string>EthiopiaJiret</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Best World Quotes-->
         <scene sceneID="tne-QT-ifu">
@@ -79,7 +84,7 @@
         <scene sceneID="ERQ-eY-MW6">
             <objects>
                 <navigationController modalTransitionStyle="crossDissolve" id="pbJ-K8-LnJ" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0gM-6A-uAW">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0gM-6A-uAW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -115,13 +120,13 @@
                                 <color key="backgroundColor" red="0.99392062425613403" green="0.049695082008838654" blue="0.32055583596229553" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="1" green="0.20373919469999999" blue="0.29233046019999998" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krj-HL-R0y">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="krj-HL-R0y">
                                 <rect key="frame" x="20" y="170" width="374" height="343"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="343" id="Y9K-UO-IrM"/>
                                 </constraints>
                                 <color key="textColor" red="0.90812785689999997" green="0.94645584240000002" blue="0.96707255469999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="35"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8D-xD-MKA">
@@ -180,7 +185,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dt8-wa-SBo" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ohz-vN-Zfo">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ohz-vN-Zfo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

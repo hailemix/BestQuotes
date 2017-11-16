@@ -20,7 +20,9 @@ class detailOne : UIViewController,UIScrollViewDelegate {
    
     @IBOutlet weak var toolBar: UIToolbar!
     
-    var dis = ["Once Upon I looked upon the cross were you died","I'm humbled by your mercy and I'm broken inside","Once again I thank you","Once Again I pour out my life"]
+    var dis = ["ሰዉ አባቱ የነገረዉ ነገር ሁሉ እዉነት መሆኑን በተረዳበት እድሜ ላይ እዉነት እንደሌለ የሚያስብ ልጅ ይኖረዋል፡፡" + "\n" + "\n" + "~ቻርልስ ዋድስዎርዝ~",
+        "በማሸነፍና በመሸነፍ መካከል ያለዉ ልዩነት ተስፋ አለመቁረጥ ነዉ፡፡" + "\n" + "\n" + "~ዋልት ዲስኒ~",
+        "አንድ ሰዉ ተሳካለት የምለዉ አንዴ በወጣዉ ከፍታ ሳይሆን ህይወቱ ሲዘቅጥ እንደገና ተስፈንጥሮ በወጣዉ ርዝመት ልክ ነዉ"]
 
     
     override func viewDidLoad() {

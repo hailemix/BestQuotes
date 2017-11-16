@@ -15,6 +15,7 @@
 		CE8298AD1F700B4500BC3C0F /* BestQuotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8298AC1F700B4500BC3C0F /* BestQuotesTests.swift */; };
 		CE8298B81F700E3A00BC3C0F /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8298B71F700E3A00BC3C0F /* MyCollectionViewCell.swift */; };
 		CE8317521FBC3BF00014DF68 /* TransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8317511FBC3BEF0014DF68 /* TransitionAnimation.swift */; };
+		CE8317541FBDC3B50014DF68 /* jiret.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE8317531FBDC3B50014DF68 /* jiret.ttf */; };
 		CEF62B831F729E10001C6BF3 /* detailOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF62B821F729E10001C6BF3 /* detailOne.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		CE8298AE1F700B4500BC3C0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE8298B71F700E3A00BC3C0F /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE8317511FBC3BEF0014DF68 /* TransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimation.swift; sourceTree = "<group>"; };
+		CE8317531FBDC3B50014DF68 /* jiret.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = jiret.ttf; sourceTree = "<group>"; };
 		CEF62B821F729E10001C6BF3 /* detailOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailOne.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +94,7 @@
 				CE8298A31F700B4500BC3C0F /* Info.plist */,
 				CEF62B821F729E10001C6BF3 /* detailOne.swift */,
 				CE8317511FBC3BEF0014DF68 /* TransitionAnimation.swift */,
+				CE8317531FBDC3B50014DF68 /* jiret.ttf */,
 			);
 			path = BestQuotes;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				CE8298A21F700B4500BC3C0F /* LaunchScreen.storyboard in Resources */,
 				CE82989F1F700B4500BC3C0F /* Assets.xcassets in Resources */,
 				CE82989D1F700B4500BC3C0F /* Main.storyboard in Resources */,
+				CE8317541FBDC3B50014DF68 /* jiret.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
