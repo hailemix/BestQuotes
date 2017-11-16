@@ -30,9 +30,6 @@ class detailOne : UIViewController,UIScrollViewDelegate {
 
         super.viewDidLoad()
         
-    
-        
-        
         self.scrollView.frame = CGRect(x:0,y:0,width:self.view.frame.width,height:self.view.frame.height)
         let scrollViewWidth : CGFloat = self.scrollView.frame.width
         let scrollViewHeight : CGFloat = self.scrollView.frame.height
@@ -97,7 +94,23 @@ class detailOne : UIViewController,UIScrollViewDelegate {
             activityViewController.excludedActivityTypes = [UIActivityType.assignToContact,UIActivityType.saveToCameraRoll,UIActivityType.copyToPasteboard]
             self.present(activityViewController,animated:true,completion:nil)
         }
-     
+        
+        if(pageControl.currentPage == 2) {
+        
+        let shareThree = dis [2]
+            let activityViewController : UIActivityViewController = UIActivityViewController(activityItems:[shareThree], applicationActivities : nil)
+            activityViewController.popoverPresentationController?.sourceView = (sender)
+            activityViewController.excludedActivityTypes = [UIActivityType.assignToContact,UIActivityType.saveToCameraRoll,UIActivityType.copyToPasteboard]
+            self.present(activityViewController,animated:true,completion:nil)
+        }
+        if(pageControl.currentPage == 3) {
+        
+        let shareFour = dis [3]
+            let activityViewController : UIActivityViewController = UIActivityViewController(activityItems:[shareFour],applicationActivities: nil)
+            activityViewController.popoverPresentationController?.sourceView = (sender)
+            activityViewController.excludedActivityTypes = [UIActivityType.assignToContact,UIActivityType.saveToCameraRoll,UIActivityType.copyToPasteboard]
+            self.present(activityViewController,animated:true,completion:nil)
+        }
     }
 
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
@@ -142,13 +155,13 @@ class detailOne : UIViewController,UIScrollViewDelegate {
 
     func fadeIn() {
         
-        UITextView.animate(withDuration: 0.2, delay:0.10,options:[.curveEaseIn],animations: {self.textView.alpha = 1.0;  self.textView.frame.origin.y -= 20 },completion : nil)
+        UITextView.animate(withDuration: 0.15, delay:0.08, options:[.curveEaseIn],animations: {self.textView.alpha = 1.0;self.textView.frame.origin.x -= 15; self.textView.frame.origin.y -= 30 },completion : nil)
         
     }
     
     func fadeOut () {
         
-        UITextView.animate(withDuration: 0.2, delay:0.10,options:[.curveEaseOut],animations: {self.textView.alpha = 0.005; self.textView.frame.origin.y += 20 }, completion: nil)
+        UITextView.animate(withDuration: 0.15, delay:0.08, options:[.curveEaseOut],animations: {self.textView.alpha = 0.005; self.textView.frame.origin.x += 15 ;self.textView.frame.origin.y += 30 }, completion: nil)
     }
     
 
