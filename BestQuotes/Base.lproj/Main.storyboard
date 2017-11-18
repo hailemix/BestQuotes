@@ -120,43 +120,42 @@
                                 <color key="backgroundColor" red="0.99392062425613403" green="0.049695082008838654" blue="0.32055583596229553" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="1" green="0.20373919469999999" blue="0.29233046019999998" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="krj-HL-R0y">
-                                <rect key="frame" x="20" y="170" width="374" height="343"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="343" id="Y9K-UO-IrM"/>
-                                </constraints>
-                                <color key="textColor" red="0.90812785689999997" green="0.94645584240000002" blue="0.96707255469999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="35"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8D-xD-MKA">
                                 <rect key="frame" x="20" y="692" width="36" height="36"/>
+                                <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="34"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="share"/>
                                 <connections>
                                     <action selector="share:" destination="A5c-Q6-cFp" eventType="touchUpInside" id="b04-xV-mfI"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="krj-HL-R0y">
+                                <rect key="frame" x="20" y="197" width="374" height="343"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="34"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="trailing" secondItem="v2k-sX-ll3" secondAttribute="trailing" id="0ee-hT-qKp"/>
-                            <constraint firstItem="krj-HL-R0y" firstAttribute="leading" secondItem="ctM-1a-f9I" secondAttribute="leadingMargin" id="4dn-08-b9y"/>
-                            <constraint firstItem="v2k-sX-ll3" firstAttribute="leading" secondItem="keN-Tf-QfJ" secondAttribute="leading" id="5WC-HL-YEC"/>
-                            <constraint firstItem="krj-HL-R0y" firstAttribute="top" secondItem="OMe-4Q-N12" secondAttribute="bottom" constant="106" id="8lQ-o9-bzx"/>
-                            <constraint firstItem="o8D-xD-MKA" firstAttribute="leading" secondItem="ctM-1a-f9I" secondAttribute="leadingMargin" id="96U-kJ-ePf"/>
-                            <constraint firstItem="c9v-iY-RdW" firstAttribute="top" secondItem="o8D-xD-MKA" secondAttribute="bottom" constant="8" id="9Mv-NH-uDz"/>
-                            <constraint firstItem="keN-Tf-QfJ" firstAttribute="bottom" secondItem="c9v-iY-RdW" secondAttribute="top" id="GYT-0I-etT"/>
-                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="top" secondItem="ctM-1a-f9I" secondAttribute="top" id="Jls-tg-FsW"/>
-                            <constraint firstItem="v2k-sX-ll3" firstAttribute="bottom" secondItem="c9v-iY-RdW" secondAttribute="top" id="TkO-xa-0E4"/>
-                            <constraint firstItem="v2k-sX-ll3" firstAttribute="leading" secondItem="ctM-1a-f9I" secondAttribute="leading" id="YbI-Ro-WSa"/>
-                            <constraint firstItem="krj-HL-R0y" firstAttribute="centerX" secondItem="keN-Tf-QfJ" secondAttribute="centerX" id="aDp-RB-B6O"/>
-                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="trailing" secondItem="keN-Tf-QfJ" secondAttribute="trailing" id="f0U-69-zMx"/>
-                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="leading" secondItem="v2k-sX-ll3" secondAttribute="leading" id="fdJ-n8-x3I"/>
-                            <constraint firstAttribute="trailing" secondItem="v2k-sX-ll3" secondAttribute="trailing" id="pot-Rk-Y4V"/>
-                            <constraint firstItem="v2k-sX-ll3" firstAttribute="top" secondItem="SkN-Gs-NSp" secondAttribute="top" id="u9P-V7-gQq"/>
-                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="bottom" secondItem="c9v-iY-RdW" secondAttribute="top" id="yKs-s2-zgq"/>
+                            <constraint firstItem="krj-HL-R0y" firstAttribute="leading" secondItem="ctM-1a-f9I" secondAttribute="leadingMargin" id="52Z-r1-FOS"/>
+                            <constraint firstItem="krj-HL-R0y" firstAttribute="top" secondItem="OMe-4Q-N12" secondAttribute="bottom" constant="133" id="65y-J3-HEN"/>
+                            <constraint firstItem="c9v-iY-RdW" firstAttribute="top" secondItem="o8D-xD-MKA" secondAttribute="bottom" constant="8" symbolic="YES" id="7e7-Yt-83t"/>
+                            <constraint firstItem="v2k-sX-ll3" firstAttribute="leading" secondItem="keN-Tf-QfJ" secondAttribute="leading" id="Aup-B1-TNf"/>
+                            <constraint firstItem="krj-HL-R0y" firstAttribute="leading" secondItem="o8D-xD-MKA" secondAttribute="leading" id="COd-YI-eNd"/>
+                            <constraint firstItem="krj-HL-R0y" firstAttribute="centerX" secondItem="keN-Tf-QfJ" secondAttribute="centerX" id="GBV-GF-Gbk"/>
+                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="centerY" secondItem="krj-HL-R0y" secondAttribute="centerY" id="HJa-2O-wHH"/>
+                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="top" secondItem="v2k-sX-ll3" secondAttribute="top" id="OZw-ya-fJs"/>
+                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="bottom" secondItem="c9v-iY-RdW" secondAttribute="top" id="TlM-1z-fUc"/>
+                            <constraint firstItem="v2k-sX-ll3" firstAttribute="bottom" secondItem="c9v-iY-RdW" secondAttribute="top" id="Vgg-3K-CT3"/>
+                            <constraint firstItem="keN-Tf-QfJ" firstAttribute="bottom" secondItem="c9v-iY-RdW" secondAttribute="top" id="d3t-tU-jfx"/>
+                            <constraint firstAttribute="trailing" secondItem="SkN-Gs-NSp" secondAttribute="trailing" id="dW9-yR-RqS"/>
+                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="top" secondItem="ctM-1a-f9I" secondAttribute="top" id="dfo-a6-4LF"/>
+                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="leading" secondItem="ctM-1a-f9I" secondAttribute="leading" id="hYC-P3-ySp"/>
+                            <constraint firstItem="v2k-sX-ll3" firstAttribute="trailing" secondItem="keN-Tf-QfJ" secondAttribute="trailing" id="jVD-bV-Ep1"/>
+                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="leading" secondItem="keN-Tf-QfJ" secondAttribute="leading" id="p9G-GB-cZc"/>
+                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="trailing" secondItem="keN-Tf-QfJ" secondAttribute="trailing" id="vg2-ar-2uX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0yF-Yw-bBQ">

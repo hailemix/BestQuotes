@@ -15,9 +15,7 @@ class detailOne : UIViewController,UIScrollViewDelegate {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var pageControl: UIPageControl!
     @IBOutlet var textView: UITextView!
-    
     @IBOutlet weak var backButton: UIBarButtonItem!
-   
     @IBOutlet weak var toolBar: UIToolbar!
     
     var dis = ["ሰዉ አባቱ የነገረዉ ነገር ሁሉ እዉነት መሆኑን በተረዳበት እድሜ ላይ እዉነት እንደሌለ የሚያስብ ልጅ ይኖረዋል፡፡" + "\n" + "\n" + "~ቻርልስ ዋድስዎርዝ~",
@@ -36,7 +34,6 @@ class detailOne : UIViewController,UIScrollViewDelegate {
         let scrollViewWidth : CGFloat = self.scrollView.frame.width
         let scrollViewHeight : CGFloat = self.scrollView.frame.height
         
-         textView.text = dis[0]
         
         
         
@@ -45,9 +42,6 @@ class detailOne : UIViewController,UIScrollViewDelegate {
         textView.text = dis[0]
         textView.textAlignment = .center
         
-       
-   
-        
         let imgTwo = UIScrollView(frame: CGRect(x:scrollViewWidth,y:0,width:scrollViewWidth,height:scrollViewHeight))
         
         
@@ -55,8 +49,6 @@ class detailOne : UIViewController,UIScrollViewDelegate {
         
         let imgFour = UIScrollView(frame: CGRect(x:scrollViewWidth*3,y:0,width:scrollViewWidth,height:scrollViewHeight))
       
-        
-        
         self.scrollView.addSubview(imgOne)
         self.scrollView.addSubview(imgTwo)
         self.scrollView.addSubview(imgThree)
@@ -66,55 +58,34 @@ class detailOne : UIViewController,UIScrollViewDelegate {
         self.pageControl.currentPage = 0
         self.pageControl.isHidden = true
         self.pageControl.numberOfPages = 4
-        
-  
-        
-    
+
     }
+    
     
     @IBAction func share(_ sender: UIButton) {
-  
-            if(pageControl.currentPage == 0) {
-                
-                let shareOne  = dis[0]
-                
-                let activityViewController : UIActivityViewController = UIActivityViewController (activityItems:[shareOne] ,applicationActivities: nil)
-                activityViewController.popoverPresentationController?.sourceView = (sender )
-                activityViewController.excludedActivityTypes = [
-                
-                UIActivityType.assignToContact,UIActivityType.saveToCameraRoll,UIActivityType.copyToPasteboard ]
-                self.present(activityViewController,animated:true,completion:nil)
-              
-            }
+       
+      
         
-        
-        if(pageControl.currentPage == 1) {
-        
-            let shareTwo = dis[1]
-            let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [shareTwo],applicationActivities: nil)
-            activityViewController.popoverPresentationController?.sourceView = (sender)
-            activityViewController.excludedActivityTypes = [UIActivityType.assignToContact,UIActivityType.saveToCameraRoll,UIActivityType.copyToPasteboard]
-            self.present(activityViewController,animated:true,completion:nil)
+        switch pageControl.currentPage {
+         
+        case 0:
+           textView.text = dis[0]
+        case 1:
+            textView.text = dis[1]
+        case 2:
+           textView.text = dis[2]
+        default:
+            print("All the strings are out.")
         }
         
-        if(pageControl.currentPage == 2) {
         
-        let shareThree = dis [2]
-            let activityViewController : UIActivityViewController = UIActivityViewController(activityItems:[shareThree], applicationActivities : nil)
-            activityViewController.popoverPresentationController?.sourceView = (sender)
-            activityViewController.excludedActivityTypes = [UIActivityType.assignToContact,UIActivityType.saveToCameraRoll,UIActivityType.copyToPasteboard]
-            self.present(activityViewController,animated:true,completion:nil)
-        }
-        if(pageControl.currentPage == 3) {
-        
-        let shareFour = dis [3]
-            let activityViewController : UIActivityViewController = UIActivityViewController(activityItems:[shareFour],applicationActivities: nil)
-            activityViewController.popoverPresentationController?.sourceView = (sender)
-            activityViewController.excludedActivityTypes = [UIActivityType.assignToContact,UIActivityType.saveToCameraRoll,UIActivityType.copyToPasteboard]
-            self.present(activityViewController,animated:true,completion:nil)
-        }
+        let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [textView.text],applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = (sender)
+        activityViewController.excludedActivityTypes = [UIActivityType.assignToContact,UIActivityType.saveToCameraRoll,UIActivityType.copyToPasteboard]
+        self.present(activityViewController,animated:true,completion:nil)
     }
-
+    
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let pageWidth : CGFloat = scrollView.frame.width
         let currentPage : CGFloat = floor((scrollView.contentOffset.x - pageWidth/2)/pageWidth) + 1
@@ -122,26 +93,22 @@ class detailOne : UIViewController,UIScrollViewDelegate {
         self.pageControl.currentPage = Int(currentPage)
  
         textView.textAlignment = .center
-      
-   
-        if(pageControl.currentPage == 0) {
-
-      
+        
+        
+        switch pageControl.currentPage {
+       
+        case 0:
             textView.text = dis[0]
- 
-        }  else if(pageControl.currentPage == 1) {
-            
+        case 1:
             textView.text = dis[1]
-     
-        } else if(pageControl.currentPage == 2){
-            
+        case 2:
             textView.text = dis[2]
-            
-        } else if (pageControl.currentPage == 3){
-        
+        case 3:
             textView.text = dis[3]
+        default:
+            print("The items are finished")
         }
-        
+      
         
     }
     
@@ -157,15 +124,15 @@ class detailOne : UIViewController,UIScrollViewDelegate {
 
     func fadeIn() {
         
-        UITextView.animate(withDuration: 0.15, delay:0.08, options:[.curveEaseIn],animations: {self.textView.alpha = 1.0;self.textView.frame.origin.x -= 15; self.textView.frame.origin.y -= 30 },completion : nil)
+        UITextView.animate(withDuration: 0.12, delay:0.08, options:[.curveEaseIn],animations: {self.textView.alpha = 1.0;self.textView.frame.origin.x -= 15; self.textView.frame.origin.y -= 30 },completion : nil)
         
     }
     
     func fadeOut () {
         
-        UITextView.animate(withDuration: 0.15, delay:0.08, options:[.curveEaseOut],animations: {self.textView.alpha = 0.005; self.textView.frame.origin.x += 15 ;self.textView.frame.origin.y += 30 }, completion: nil)
+        UITextView.animate(withDuration: 0.10, delay:0.06, options:[.curveEaseOut],animations: {self.textView.alpha = 0.005; self.textView.frame.origin.x += 15 ;self.textView.frame.origin.y += 30 }, completion: nil)
     }
     
-
+     //  Reminder:  Please add SwipeGestureRecognizer in the textView Array
 
 }
