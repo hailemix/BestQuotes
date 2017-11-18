@@ -25,7 +25,6 @@ class detailOne : UIViewController,UIScrollViewDelegate {
     
     override func viewDidLoad() {
         
-        
      self.imageView.addSubview(textView)
 
         super.viewDidLoad()
