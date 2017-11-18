@@ -73,6 +73,10 @@ class detailOne : UIViewController,UIScrollViewDelegate {
             textView.text = dis[1]
         case 2:
            textView.text = dis[2]
+        case 3:
+            textView.text = dis[3]
+            
+            
         default:
             print("All the strings are out.")
         }
