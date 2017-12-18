@@ -64,6 +64,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE3C83AB1FE7ADB50078B327 /* All Swift Codes */ = {
+			isa = PBXGroup;
+			children = (
+				CE8317511FBC3BEF0014DF68 /* TransitionAnimation.swift */,
+				CEF62B821F729E10001C6BF3 /* detailOne.swift */,
+				CE8298B71F700E3A00BC3C0F /* MyCollectionViewCell.swift */,
+				CE8298991F700B4500BC3C0F /* ViewController.swift */,
+				CE8298971F700B4500BC3C0F /* AppDelegate.swift */,
+			);
+			name = "All Swift Codes";
+			sourceTree = "<group>";
+		};
+		CE3C83AC1FE7ADD00078B327 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CE82989B1F700B4500BC3C0F /* Main.storyboard */,
+				CE8298A01F700B4500BC3C0F /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		CE82988B1F700B4400BC3C0F = {
 			isa = PBXGroup;
 			children = (
@@ -85,15 +106,10 @@
 		CE8298961F700B4400BC3C0F /* BestQuotes */ = {
 			isa = PBXGroup;
 			children = (
-				CE8298971F700B4500BC3C0F /* AppDelegate.swift */,
-				CE8298991F700B4500BC3C0F /* ViewController.swift */,
-				CE82989B1F700B4500BC3C0F /* Main.storyboard */,
-				CE8298B71F700E3A00BC3C0F /* MyCollectionViewCell.swift */,
+				CE3C83AC1FE7ADD00078B327 /* Storyboards */,
+				CE3C83AB1FE7ADB50078B327 /* All Swift Codes */,
 				CE82989E1F700B4500BC3C0F /* Assets.xcassets */,
-				CE8298A01F700B4500BC3C0F /* LaunchScreen.storyboard */,
 				CE8298A31F700B4500BC3C0F /* Info.plist */,
-				CEF62B821F729E10001C6BF3 /* detailOne.swift */,
-				CE8317511FBC3BEF0014DF68 /* TransitionAnimation.swift */,
 				CE4CD4211FC02DCA00A748CA /* jiret.ttf */,
 			);
 			path = BestQuotes;

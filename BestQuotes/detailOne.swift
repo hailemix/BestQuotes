@@ -22,7 +22,6 @@ class detailOne : UIViewController,UIScrollViewDelegate {
         "በማሸነፍና በመሸነፍ መካከል ያለዉ ልዩነት ተስፋ አለመቁረጥ ነዉ፡፡" + "\n" + "\n" + "~ዋልት ዲስኒ~",
         "አንድ ሰዉ ተሳካለት የምለዉ አንዴ በወጣዉ ከፍታ ሳይሆን ህይወቱ ሲዘቅጥ እንደገና ተስፈንጥሮ በወጣዉ ርዝመት ልክ ነዉ"]
 
-    
     override func viewDidLoad() {
         
      self.imageView.addSubview(textView)
@@ -30,12 +29,11 @@ class detailOne : UIViewController,UIScrollViewDelegate {
         super.viewDidLoad()
         
         self.scrollView.frame = CGRect(x:0,y:0,width:self.view.frame.width,height:self.view.frame.height)
+        
         let scrollViewWidth : CGFloat = self.scrollView.frame.width
         let scrollViewHeight : CGFloat = self.scrollView.frame.height
         
-        
-        
-        
+      
         let imgOne = UIScrollView(frame: CGRect(x:0,y:0,width:scrollViewWidth,height:scrollViewHeight))
         
         textView.text = dis[0]
@@ -44,7 +42,7 @@ class detailOne : UIViewController,UIScrollViewDelegate {
         let imgTwo = UIScrollView(frame: CGRect(x:scrollViewWidth,y:0,width:scrollViewWidth,height:scrollViewHeight))
         
         
-        let imgThree = UIScrollView(frame: CGRect(x:scrollViewWidth*2,y:0,width:scrollViewWidth,height:scrollViewHeight))
+        let imgThree = UIScrollView(frame: CGRect(x : scrollViewWidth * 2, y : 0,width : scrollViewWidth,height : scrollViewHeight))
         
         let imgFour = UIScrollView(frame: CGRect(x:scrollViewWidth*3,y:0,width:scrollViewWidth,height:scrollViewHeight))
       
@@ -122,8 +120,6 @@ class detailOne : UIViewController,UIScrollViewDelegate {
         fadeOut()
         fadeIn()
     }
-    
-
 
     func fadeIn() {
         

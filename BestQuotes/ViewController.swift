@@ -13,7 +13,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     @IBOutlet weak var MyCollectionView: UICollectionView!
     
     var screenSize : CGRect!
-    var screenWidth: CGFloat!
+    var screenWidth: CGFloat!  // CGFloat is a part of CGSize!
     var screenHeight : CGFloat!
     let transition = TransitionAnimation()
     var backDurationTime: Double = 1.0
@@ -38,9 +38,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         screenSize = UIScreen.main.bounds
         screenWidth = screenSize.width
         screenHeight = screenSize.height
-        
-        
-   
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,7 +47,6 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     }
     
 
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     
     {
@@ -57,7 +54,6 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     }
     
 
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: zCellIdentifier, for: indexPath) as! MyCollectionViewCell
