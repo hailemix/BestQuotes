@@ -18,76 +18,90 @@ class detailOne : UIViewController,UIScrollViewDelegate {
     @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var toolBar: UIToolbar!
     
-    var dis = ["ሰዉ አባቱ የነገረዉ ነገር ሁሉ እዉነት መሆኑን በተረዳበት እድሜ ላይ እዉነት እንደሌለ የሚያስብ ልጅ ይኖረዋል፡፡" + "\n" + "\n" + "~ቻርልስ ዋድስዎርዝ~",
+    var detailOneContent = ["ሰዉ አባቱ የነገረዉ ነገር ሁሉ እዉነት መሆኑን በተረዳበት እድሜ ላይ እዉነት እንደሌለ የሚያስብ ልጅ ይኖረዋል፡፡" + "\n" + "\n" + "~ቻርልስ ዋድስዎርዝ~",
         "በማሸነፍና በመሸነፍ መካከል ያለዉ ልዩነት ተስፋ አለመቁረጥ ነዉ፡፡" + "\n" + "\n" + "~ዋልት ዲስኒ~",
-        "አንድ ሰዉ ተሳካለት የምለዉ አንዴ በወጣዉ ከፍታ ሳይሆን ህይወቱ ሲዘቅጥ እንደገና ተስፈንጥሮ በወጣዉ ርዝመት ልክ ነዉ"]
+        "አንድ ሰዉ ተሳካለት የምለዉ አንዴ በወጣዉ ከፍታ ሳይሆን ህይወቱ ሲዘቅጥ እንደገና ተስፈንጥሮ በወጣዉ ርዝመት ልክ ነዉ", "በማሸነፍና በመሸነፍ መካከል ያለዉ ልዩነት ተስፋ አለመቁረጥ ነዉ፡፡" + "\n" + "\n" + "~ዋልት ዲስኒ~"]
 
     override func viewDidLoad() {
-        
-     self.imageView.addSubview(textView)
-
         super.viewDidLoad()
         
-        self.scrollView.frame = CGRect(x:0,y:0,width:self.view.frame.width,height:self.view.frame.height)
+        self.imageView.addSubview(textView)
         
+      
+     self.scrollView.frame = CGRect(x:0,y:0,width:self.view.frame.width,height:self.view.frame.height)
+    
         let scrollViewWidth : CGFloat = self.scrollView.frame.width
         let scrollViewHeight : CGFloat = self.scrollView.frame.height
         
       
-        let imgOne = UIScrollView(frame: CGRect(x:0,y:0,width:scrollViewWidth,height:scrollViewHeight))
         
-        textView.text = dis[0]
+        
+        textView.text = detailOneContent[0]
         textView.textAlignment = .center
-        
-        let imgTwo = UIScrollView(frame: CGRect(x:scrollViewWidth,y:0,width:scrollViewWidth,height:scrollViewHeight))
-        
-        
-        let imgThree = UIScrollView(frame: CGRect(x : scrollViewWidth * 2, y : 0,width : scrollViewWidth,height : scrollViewHeight))
-        
-        let imgFour = UIScrollView(frame: CGRect(x:scrollViewWidth*3,y:0,width:scrollViewWidth,height:scrollViewHeight))
       
-        self.scrollView.addSubview(imgOne)
-        self.scrollView.addSubview(imgTwo)
-        self.scrollView.addSubview(imgThree)
-        self.scrollView.addSubview(imgFour)
-        self.scrollView.contentSize = CGSize(width:self.scrollView.frame.width*4,height:self.scrollView.frame.height)
-        self.scrollView.delegate = self
-        self.pageControl.currentPage = 0
-        self.pageControl.isHidden = true
-        self.pageControl.numberOfPages = 4
+        for  index in 0 ..< 100   {
+            
+            let k : CGFloat = CGFloat(index)
+            let totalImageWidth : CGFloat = k + 1
+        
+            let imagePosition : UIScrollView = UIScrollView(frame: CGRect(x:scrollViewWidth * k,y:0,width:scrollViewWidth,height:scrollViewHeight))
+            self.scrollView.addSubview(imagePosition)
+            
+            self.scrollView.delegate = self
+            self.pageControl.currentPage = 0
+            self.pageControl.isHidden = true
+            self.pageControl.numberOfPages = Int(totalImageWidth)
+            self.scrollView.contentSize = CGSize(width:self.scrollView.frame.width * totalImageWidth,height:self.scrollView.frame.height)
+        }
+
 
     }
     
     
     @IBAction func share(_ sender: UIButton) {
-       
-      
         
-        switch pageControl.currentPage {
-         
+        var textPosition : Int?
+        
+        switch  pageControl.currentPage  {
+       
         case 0:
-           textView.text = dis[0]
-        case 1:
-            textView.text = dis[1]
-        case 2:
-           textView.text = dis[2]
-        case 3:
-            textView.text = dis[3]
+             textPosition = 0
             
+        case 1:
+             textPosition = 1
+        
+        case 2:
+             textPosition = 2
+            
+        case 3:
+             textPosition = 3
+            
+        case 4:
+            textPosition = 4
             
         default:
-            print("All the strings are out.")
+            print("You've reached the total numer of text share!")
+            
+         
+         
         }
         
+            textView.text = detailOneContent[textPosition!]
         
-        let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [textView.text],applicationActivities: nil)
-        activityViewController.popoverPresentationController?.sourceView = (sender)
-        activityViewController.excludedActivityTypes = [UIActivityType.assignToContact,UIActivityType.saveToCameraRoll,UIActivityType.copyToPasteboard]
-        self.present(activityViewController,animated:true,completion:nil)
+            let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [textView.text],applicationActivities: nil)
+            activityViewController.popoverPresentationController?.sourceView = (sender)
+            activityViewController.excludedActivityTypes = [UIActivityType.assignToContact,UIActivityType.saveToCameraRoll,UIActivityType.copyToPasteboard]
+            self.present(activityViewController,animated:true,completion:nil)
+        
+        
     }
     
     
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+
+        
         let pageWidth : CGFloat = scrollView.frame.width
         let currentPage : CGFloat = floor((scrollView.contentOffset.x - pageWidth/2)/pageWidth) + 1
         
@@ -95,23 +109,25 @@ class detailOne : UIViewController,UIScrollViewDelegate {
  
         textView.textAlignment = .center
         
-        
+        var textToBeSwiped : Int?
         switch pageControl.currentPage {
-       
+           
         case 0:
-            textView.text = dis[0]
+            textToBeSwiped = 0
         case 1:
-            textView.text = dis[1]
+            textToBeSwiped = 1
         case 2:
-            textView.text = dis[2]
+            textToBeSwiped = 2
         case 3:
-            textView.text = dis[3]
+           textToBeSwiped  = 3
         default:
             print("The items are finished")
         }
-      
-        
+   
+        textView.text = detailOneContent[textToBeSwiped!]
     }
+    
+    
     
 
     func scrollViewDidScroll(_ scrollView: UIScrollView)

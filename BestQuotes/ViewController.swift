@@ -15,15 +15,15 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     var screenSize : CGRect!
     var screenWidth: CGFloat!  // CGFloat is a part of CGSize!
     var screenHeight : CGFloat!
-    let transition = TransitionAnimation()
+    let gridToDetailTransition = TransitionAnimation()
     var backDurationTime: Double = 1.0
   
 
 
-    var images = ["a","b","c","d","e","f","g","h","i","j"]
+    var gridImages = ["a","b","c","d","e","f","g","h","i","j"]
  
 
-    let zCellIdentifier = "collectionCell"
+    let gridCellIdentifier = "collectionCell"
     
     
  
@@ -50,15 +50,15 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     
     {
-        return images.count
+        return gridImages.count
     }
     
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: zCellIdentifier, for: indexPath) as! MyCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: gridCellIdentifier, for: indexPath) as! MyCollectionViewCell
 
-        cell.myImage.image = UIImage(named: images[indexPath.row])
+        cell.myImage.image = UIImage(named: gridImages[indexPath.row])
         return cell
     }
     
@@ -101,7 +101,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     }
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return transition
+        return gridToDetailTransition
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
