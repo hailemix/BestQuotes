@@ -17,76 +17,101 @@ class detailOne : UIViewController,UIScrollViewDelegate {
     @IBOutlet var textView: UITextView!
     @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var toolBar: UIToolbar!
+
     
-    var detailOneContent = ["ሰዉ አባቱ የነገረዉ ነገር ሁሉ እዉነት መሆኑን በተረዳበት እድሜ ላይ እዉነት እንደሌለ የሚያስብ ልጅ ይኖረዋል፡፡" + "\n" + "\n" + "~ቻርልስ ዋድስዎርዝ~",
+    var textIndex = 0
+    let maxText = 5
+    var detailOneContent = [ "ሰዉ አባቱ የነገረዉ ነገር ሁሉ እዉነት መሆኑን በተረዳበት እድሜ ላይ እዉነት እንደሌለ የሚያስብ ልጅ ይኖረዋል፡፡" + "\n" + "\n" + "~ቻርልስ ዋድስዎርዝ~",
         "በማሸነፍና በመሸነፍ መካከል ያለዉ ልዩነት ተስፋ አለመቁረጥ ነዉ፡፡" + "\n" + "\n" + "~ዋልት ዲስኒ~",
-        "አንድ ሰዉ ተሳካለት የምለዉ አንዴ በወጣዉ ከፍታ ሳይሆን ህይወቱ ሲዘቅጥ እንደገና ተስፈንጥሮ በወጣዉ ርዝመት ልክ ነዉ", "በማሸነፍና በመሸነፍ መካከል ያለዉ ልዩነት ተስፋ አለመቁረጥ ነዉ፡፡" + "\n" + "\n" + "~ዋልት ዲስኒ~"]
+        "አንድ ሰዉ ተሳካለት የምለዉ አንዴ በወጣዉ ከፍታ ሳይሆን ህይወቱ ሲዘቅጥ እንደገና ተስፈንጥሮ በወጣዉ ርዝመት ልክ ነዉ", "Great is the Lord almighty" + "\n" + "\n" + "~ዋልት ዲስኒ~","Help me to glorify your name Lord..nothing more","There is power..power wonder working poer in the blood of the lamb" ]
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.imageView.addSubview(textView)
-        
-      
-     self.scrollView.frame = CGRect(x:0,y:0,width:self.view.frame.width,height:self.view.frame.height)
     
-        let scrollViewWidth : CGFloat = self.scrollView.frame.width
-        let scrollViewHeight : CGFloat = self.scrollView.frame.height
-        
       
-        
-        
-        textView.text = detailOneContent[0]
         textView.textAlignment = .center
-      
-        for  index in 0 ..< 100   {
-            
-            let k : CGFloat = CGFloat(index)
-            let totalImageWidth : CGFloat = k + 1
+        textView.text = detailOneContent[textIndex]
+        textView.isUserInteractionEnabled = true
+        imageView.isUserInteractionEnabled = true
+     
+        let swipeRight = UISwipeGestureRecognizer(target : self, action: #selector(self.swipeRecognize(gesture:)))
+        swipeRight.direction = .right
+        self.imageView.addGestureRecognizer(swipeRight)
         
-            let imagePosition : UIScrollView = UIScrollView(frame: CGRect(x:scrollViewWidth * k,y:0,width:scrollViewWidth,height:scrollViewHeight))
-            self.scrollView.addSubview(imagePosition)
-            
-            self.scrollView.delegate = self
-            self.pageControl.currentPage = 0
-            self.pageControl.isHidden = true
-            self.pageControl.numberOfPages = Int(totalImageWidth)
-            self.scrollView.contentSize = CGSize(width:self.scrollView.frame.width * totalImageWidth,height:self.scrollView.frame.height)
+        let swipeLeft = UISwipeGestureRecognizer(target : self, action: #selector(self.swipeRecognize(gesture:)))
+        swipeLeft.direction = .left
+        self.imageView.addGestureRecognizer(swipeLeft)
+   
         }
 
+    
+   
+
+  func swipeRecognize(gesture : UIGestureRecognizer) {
+    
+    
+    if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+        
+       
+        
+        switch swipeGesture.direction {
+        case UISwipeGestureRecognizerDirection.right:
+            
+    
+            if(textIndex != 0) // No animation for initial text Position
+            
+            {
+                
+            fadeOutRight()
+            fadeInRight()
+                
+            }
+        
+            textIndex = textIndex - 1
+            if(textIndex < 0) {
+                
+            textIndex = 0
+            
+            
+            }
+            
+            textView.text = detailOneContent[textIndex]
+            
+        case UISwipeGestureRecognizerDirection.left:
+            
+            if(textIndex != maxText) // No animation for initial text Position
+            {
+            
+            fadeOutLeft()
+            fadeInLeft()
+                
+            }
+            
+            textIndex = textIndex + 1
+           
+            if(textIndex  > maxText) {
+                
+                textIndex = maxText
+                
+            }
+            
+            textView.text = detailOneContent[textIndex]
+            
+        default:
+            break
+        }
+    }
 
     }
     
-    
     @IBAction func share(_ sender: UIButton) {
         
-        var textPosition : Int?
         
-        switch  pageControl.currentPage  {
-       
-        case 0:
-             textPosition = 0
-            
-        case 1:
-             textPosition = 1
-        
-        case 2:
-             textPosition = 2
-            
-        case 3:
-             textPosition = 3
-            
-        case 4:
-            textPosition = 4
-            
-        default:
-            print("You've reached the total numer of text share!")
-            
-         
-         
-        }
-        
-            textView.text = detailOneContent[textPosition!]
+            textView.text = detailOneContent[textIndex]
         
             let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [textView.text],applicationActivities: nil)
             activityViewController.popoverPresentationController?.sourceView = (sender)
@@ -95,57 +120,29 @@ class detailOne : UIViewController,UIScrollViewDelegate {
         
         
     }
-    
-    
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        
 
-        
-        let pageWidth : CGFloat = scrollView.frame.width
-        let currentPage : CGFloat = floor((scrollView.contentOffset.x - pageWidth/2)/pageWidth) + 1
-        
-        self.pageControl.currentPage = Int(currentPage)
- 
-        textView.textAlignment = .center
-        
-        var textToBeSwiped : Int?
-        switch pageControl.currentPage {
-           
-        case 0:
-            textToBeSwiped = 0
-        case 1:
-            textToBeSwiped = 1
-        case 2:
-            textToBeSwiped = 2
-        case 3:
-           textToBeSwiped  = 3
-        default:
-            print("The items are finished")
-        }
-   
-        textView.text = detailOneContent[textToBeSwiped!]
-    }
-    
-    
-    
 
-    func scrollViewDidScroll(_ scrollView: UIScrollView)
-    
-    {
-        fadeOut()
-        fadeIn()
-    }
-
-    func fadeIn() {
+    func fadeInLeft() {
         
-        UITextView.animate(withDuration: 0.12, delay:0.08, options:[.curveEaseIn],animations: {self.textView.alpha = 1.0;self.textView.frame.origin.x -= 15; self.textView.frame.origin.y -= 30 },completion : nil)
+        UITextView.animate(withDuration: 0.3, delay:0.08, options:[.curveEaseIn],animations: {self.textView.alpha = 1.0;self.textView.frame.origin.x -= 35; self.textView.frame.origin.y -= 30 },completion : nil)
+        
         
     }
     
-    func fadeOut () {
+    func fadeOutLeft () {
         
-        UITextView.animate(withDuration: 0.10, delay:0.06, options:[.curveEaseOut],animations: {self.textView.alpha = 0.005; self.textView.frame.origin.x += 15 ;self.textView.frame.origin.y += 30 }, completion: nil)
+        UITextView.animate(withDuration: 0.10, delay:0.06, options:[.curveEaseOut],animations: {self.textView.alpha = 0.005; self.textView.frame.origin.x += 35 ;self.textView.frame.origin.y += 30 }, completion: nil)
+    }
+    
+    func fadeInRight() {
+    
+     UITextView.animate(withDuration: 0.3, delay:0.08, options:[.curveEaseIn],animations: {self.textView.alpha = 1.0;self.textView.frame.origin.x += 35; self.textView.frame.origin.y -= 30 },completion : nil)
+    }
+    
+    func fadeOutRight() {
+        
+         UITextView.animate(withDuration: 0.10, delay:0.06, options:[.curveEaseOut],animations: {self.textView.alpha = 0.005; self.textView.frame.origin.x -= 35 ;self.textView.frame.origin.y += 30 }, completion: nil)
+    
     }
     
      //  Reminder:  Please add SwipeGestureRecognizer in the textView Array
