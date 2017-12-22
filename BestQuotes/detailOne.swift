@@ -20,13 +20,11 @@ class detailOne : UIViewController,UIScrollViewDelegate {
 
     
     var textIndex = 0
-    let maxText = 5
+    let maxTextCount = 5
     var detailOneContent = [ "ሰዉ አባቱ የነገረዉ ነገር ሁሉ እዉነት መሆኑን በተረዳበት እድሜ ላይ እዉነት እንደሌለ የሚያስብ ልጅ ይኖረዋል፡፡" + "\n" + "\n" + "~ቻርልስ ዋድስዎርዝ~",
         "በማሸነፍና በመሸነፍ መካከል ያለዉ ልዩነት ተስፋ አለመቁረጥ ነዉ፡፡" + "\n" + "\n" + "~ዋልት ዲስኒ~",
         "አንድ ሰዉ ተሳካለት የምለዉ አንዴ በወጣዉ ከፍታ ሳይሆን ህይወቱ ሲዘቅጥ እንደገና ተስፈንጥሮ በወጣዉ ርዝመት ልክ ነዉ", "Great is the Lord almighty" + "\n" + "\n" + "~ዋልት ዲስኒ~","Help me to glorify your name Lord..nothing more","There is power..power wonder working power in the blood of the lamb" ]
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,38 +46,42 @@ class detailOne : UIViewController,UIScrollViewDelegate {
    
         }
 
-    
-   
-
-  func swipeRecognize(gesture : UIGestureRecognizer) {
+    func swipeRecognize(gesture : UIGestureRecognizer) {
     
     
     if let swipeGesture = gesture as? UISwipeGestureRecognizer {
         
-       animateNextText()
         
         switch swipeGesture.direction {
             
         case UISwipeGestureRecognizerDirection.right:
-        
+          
             textIndex = textIndex - 1
             if(textIndex < 0) {
                 
             textIndex = 0
+        
+            } else {
             
+            animateNextText()
+                
             }
             
+    
             textView.text = detailOneContent[textIndex]
             
         case UISwipeGestureRecognizerDirection.left:
             
         textIndex = textIndex + 1
            
-            if(textIndex  > maxText) {
+            if(textIndex  > maxTextCount) {
                 
-                textIndex = maxText
-    
-            }
+                textIndex = maxTextCount
+            
+            } else {
+        
+                animateNextText()
+           }
             
             textView.text = detailOneContent[textIndex]
             
@@ -87,7 +89,7 @@ class detailOne : UIViewController,UIScrollViewDelegate {
             break
         }
     }
-
+    
     }
     
     @IBAction func share(_ sender: UIButton) {
@@ -100,14 +102,11 @@ class detailOne : UIViewController,UIScrollViewDelegate {
             activityViewController.excludedActivityTypes = [UIActivityType.assignToContact,UIActivityType.saveToCameraRoll,UIActivityType.copyToPasteboard]
             self.present(activityViewController,animated:true,completion:nil)
         
-        
     }
 
-
-    func animateNextText() {
-    
+    func animateNextText()   {
+        
         let nextText : String = self.textView.text
         UITextView.transition(with: self.textView, duration: 0.4, options: .transitionFlipFromBottom, animations: { self.textView.text = nextText }, completion: nil)
-        
     }
 }
