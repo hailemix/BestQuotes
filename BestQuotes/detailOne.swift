@@ -23,7 +23,7 @@ class detailOne : UIViewController,UIScrollViewDelegate {
     let maxText = 5
     var detailOneContent = [ "ሰዉ አባቱ የነገረዉ ነገር ሁሉ እዉነት መሆኑን በተረዳበት እድሜ ላይ እዉነት እንደሌለ የሚያስብ ልጅ ይኖረዋል፡፡" + "\n" + "\n" + "~ቻርልስ ዋድስዎርዝ~",
         "በማሸነፍና በመሸነፍ መካከል ያለዉ ልዩነት ተስፋ አለመቁረጥ ነዉ፡፡" + "\n" + "\n" + "~ዋልት ዲስኒ~",
-        "አንድ ሰዉ ተሳካለት የምለዉ አንዴ በወጣዉ ከፍታ ሳይሆን ህይወቱ ሲዘቅጥ እንደገና ተስፈንጥሮ በወጣዉ ርዝመት ልክ ነዉ", "Great is the Lord almighty" + "\n" + "\n" + "~ዋልት ዲስኒ~","Help me to glorify your name Lord..nothing more","There is power..power wonder working poer in the blood of the lamb" ]
+        "አንድ ሰዉ ተሳካለት የምለዉ አንዴ በወጣዉ ከፍታ ሳይሆን ህይወቱ ሲዘቅጥ እንደገና ተስፈንጥሮ በወጣዉ ርዝመት ልክ ነዉ", "Great is the Lord almighty" + "\n" + "\n" + "~ዋልት ዲስኒ~","Help me to glorify your name Lord..nothing more","There is power..power wonder working power in the blood of the lamb" ]
     
     
 
@@ -56,26 +56,16 @@ class detailOne : UIViewController,UIScrollViewDelegate {
     
     if let swipeGesture = gesture as? UISwipeGestureRecognizer {
         
-       
+       animateNextText()
         
         switch swipeGesture.direction {
+            
         case UISwipeGestureRecognizerDirection.right:
-            
-    
-            if(textIndex != 0) // No animation for initial text Position
-            
-            {
-                
-            fadeOutRight()
-            fadeInRight()
-                
-            }
         
             textIndex = textIndex - 1
             if(textIndex < 0) {
                 
             textIndex = 0
-            
             
             }
             
@@ -83,20 +73,12 @@ class detailOne : UIViewController,UIScrollViewDelegate {
             
         case UISwipeGestureRecognizerDirection.left:
             
-            if(textIndex != maxText) // No animation for initial text Position
-            {
-            
-            fadeOutLeft()
-            fadeInLeft()
-                
-            }
-            
-            textIndex = textIndex + 1
+        textIndex = textIndex + 1
            
             if(textIndex  > maxText) {
                 
                 textIndex = maxText
-                
+    
             }
             
             textView.text = detailOneContent[textIndex]
@@ -111,7 +93,7 @@ class detailOne : UIViewController,UIScrollViewDelegate {
     @IBAction func share(_ sender: UIButton) {
         
         
-            textView.text = detailOneContent[textIndex]
+            self.textView.text = detailOneContent[textIndex]
         
             let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [textView.text],applicationActivities: nil)
             activityViewController.popoverPresentationController?.sourceView = (sender)
@@ -122,29 +104,10 @@ class detailOne : UIViewController,UIScrollViewDelegate {
     }
 
 
-    func fadeInLeft() {
-        
-        UITextView.animate(withDuration: 0.3, delay:0.08, options:[.curveEaseIn],animations: {self.textView.alpha = 1.0;self.textView.frame.origin.x -= 35; self.textView.frame.origin.y -= 30 },completion : nil)
-        
+    func animateNextText() {
+    
+        let nextText : String = self.textView.text
+        UITextView.transition(with: self.textView, duration: 0.4, options: .transitionFlipFromBottom, animations: { self.textView.text = nextText }, completion: nil)
         
     }
-    
-    func fadeOutLeft () {
-        
-        UITextView.animate(withDuration: 0.10, delay:0.06, options:[.curveEaseOut],animations: {self.textView.alpha = 0.005; self.textView.frame.origin.x += 35 ;self.textView.frame.origin.y += 30 }, completion: nil)
-    }
-    
-    func fadeInRight() {
-    
-     UITextView.animate(withDuration: 0.3, delay:0.08, options:[.curveEaseIn],animations: {self.textView.alpha = 1.0;self.textView.frame.origin.x += 35; self.textView.frame.origin.y -= 30 },completion : nil)
-    }
-    
-    func fadeOutRight() {
-        
-         UITextView.animate(withDuration: 0.10, delay:0.06, options:[.curveEaseOut],animations: {self.textView.alpha = 0.005; self.textView.frame.origin.x -= 35 ;self.textView.frame.origin.y += 30 }, completion: nil)
-    
-    }
-    
-     //  Reminder:  Please add SwipeGestureRecognizer in the textView Array
-
 }
