@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE08980520358984000F01BC /* faith.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE0897FA20358984000F01BC /* faith.jpg */; };
+		CE08980620358984000F01BC /* happy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE0897FB20358984000F01BC /* happy.jpg */; };
+		CE08980720358984000F01BC /* lead.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE0897FC20358984000F01BC /* lead.jpg */; };
+		CE08980820358984000F01BC /* lovely.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE0897FD20358984000F01BC /* lovely.jpg */; };
+		CE08980A20358984000F01BC /* mix.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE0897FF20358984000F01BC /* mix.jpg */; };
+		CE08980C20358984000F01BC /* success.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE08980120358984000F01BC /* success.jpg */; };
+		CE08980F203622EB000F01BC /* myArray.json in Resources */ = {isa = PBXBuildFile; fileRef = CE08980E203622EB000F01BC /* myArray.json */; };
+		CE36D299203C191D00ECE1ED /* adv.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE36D298203C191D00ECE1ED /* adv.jpg */; };
+		CE36D2A3203C423600ECE1ED /* marri.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE36D2A2203C423600ECE1ED /* marri.jpg */; };
+		CE36D2A5203C445400ECE1ED /* thunder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE36D2A4203C445400ECE1ED /* thunder.jpg */; };
+		CE36D2A7203C486900ECE1ED /* birr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE36D2A6203C486900ECE1ED /* birr.jpg */; };
 		CE4CD4231FC03A0500A748CA /* jiret.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE4CD4211FC02DCA00A748CA /* jiret.ttf */; };
 		CE8298981F700B4500BC3C0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8298971F700B4500BC3C0F /* AppDelegate.swift */; };
 		CE82989A1F700B4500BC3C0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8298991F700B4500BC3C0F /* ViewController.swift */; };
@@ -30,6 +41,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE0897FA20358984000F01BC /* faith.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = faith.jpg; sourceTree = "<group>"; };
+		CE0897FB20358984000F01BC /* happy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = happy.jpg; sourceTree = "<group>"; };
+		CE0897FC20358984000F01BC /* lead.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lead.jpg; sourceTree = "<group>"; };
+		CE0897FD20358984000F01BC /* lovely.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lovely.jpg; sourceTree = "<group>"; };
+		CE0897FF20358984000F01BC /* mix.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mix.jpg; sourceTree = "<group>"; };
+		CE08980120358984000F01BC /* success.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = success.jpg; sourceTree = "<group>"; };
+		CE08980E203622EB000F01BC /* myArray.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = myArray.json; path = BestQuotes/myArray.json; sourceTree = "<group>"; };
+		CE36D298203C191D00ECE1ED /* adv.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = adv.jpg; sourceTree = "<group>"; };
+		CE36D2A2203C423600ECE1ED /* marri.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = marri.jpg; sourceTree = "<group>"; };
+		CE36D2A4203C445400ECE1ED /* thunder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thunder.jpg; sourceTree = "<group>"; };
+		CE36D2A6203C486900ECE1ED /* birr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = birr.jpg; sourceTree = "<group>"; };
 		CE4CD4211FC02DCA00A748CA /* jiret.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = jiret.ttf; sourceTree = "<group>"; };
 		CE8298941F700B4400BC3C0F /* BestQuotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestQuotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8298971F700B4500BC3C0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +86,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE0897F720358446000F01BC /* Background Images */ = {
+			isa = PBXGroup;
+			children = (
+				CE36D2A6203C486900ECE1ED /* birr.jpg */,
+				CE36D2A4203C445400ECE1ED /* thunder.jpg */,
+				CE36D2A2203C423600ECE1ED /* marri.jpg */,
+				CE36D298203C191D00ECE1ED /* adv.jpg */,
+				CE0897FA20358984000F01BC /* faith.jpg */,
+				CE0897FB20358984000F01BC /* happy.jpg */,
+				CE0897FC20358984000F01BC /* lead.jpg */,
+				CE0897FD20358984000F01BC /* lovely.jpg */,
+				CE0897FF20358984000F01BC /* mix.jpg */,
+				CE08980120358984000F01BC /* success.jpg */,
+			);
+			name = "Background Images";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		CE36D297203AA56600ECE1ED /* Json file */ = {
+			isa = PBXGroup;
+			children = (
+				CE08980E203622EB000F01BC /* myArray.json */,
+			);
+			name = "Json file";
+			sourceTree = "<group>";
+		};
 		CE3C83AB1FE7ADB50078B327 /* All Swift Codes */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +136,7 @@
 		CE82988B1F700B4400BC3C0F = {
 			isa = PBXGroup;
 			children = (
+				CE36D297203AA56600ECE1ED /* Json file */,
 				CE8298961F700B4400BC3C0F /* BestQuotes */,
 				CE8298AB1F700B4500BC3C0F /* BestQuotesTests */,
 				CE8298951F700B4400BC3C0F /* Products */,
@@ -106,6 +155,7 @@
 		CE8298961F700B4400BC3C0F /* BestQuotes */ = {
 			isa = PBXGroup;
 			children = (
+				CE0897F720358446000F01BC /* Background Images */,
 				CE3C83AC1FE7ADD00078B327 /* Storyboards */,
 				CE3C83AB1FE7ADB50078B327 /* All Swift Codes */,
 				CE82989E1F700B4500BC3C0F /* Assets.xcassets */,
@@ -209,9 +259,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE36D299203C191D00ECE1ED /* adv.jpg in Resources */,
+				CE36D2A7203C486900ECE1ED /* birr.jpg in Resources */,
+				CE08980C20358984000F01BC /* success.jpg in Resources */,
+				CE08980A20358984000F01BC /* mix.jpg in Resources */,
 				CE4CD4231FC03A0500A748CA /* jiret.ttf in Resources */,
+				CE08980620358984000F01BC /* happy.jpg in Resources */,
 				CE8298A21F700B4500BC3C0F /* LaunchScreen.storyboard in Resources */,
+				CE08980720358984000F01BC /* lead.jpg in Resources */,
 				CE82989F1F700B4500BC3C0F /* Assets.xcassets in Resources */,
+				CE36D2A3203C423600ECE1ED /* marri.jpg in Resources */,
+				CE08980820358984000F01BC /* lovely.jpg in Resources */,
+				CE36D2A5203C445400ECE1ED /* thunder.jpg in Resources */,
+				CE08980F203622EB000F01BC /* myArray.json in Resources */,
+				CE08980520358984000F01BC /* faith.jpg in Resources */,
 				CE82989D1F700B4500BC3C0F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

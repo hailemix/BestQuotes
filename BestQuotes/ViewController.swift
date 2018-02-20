@@ -13,20 +13,26 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     @IBOutlet weak var MyCollectionView: UICollectionView!
     
     var screenSize : CGRect!
-    var screenWidth: CGFloat!  // CGFloat is a part of CGSize!
+    var screenWidth: CGFloat!  
     var screenHeight : CGFloat!
-    let gridToDetailTransition = TransitionAnimation()
     var backDurationTime: Double = 1.0
-  
-
-
+    var contentFromArray : UITextView!
+    var imageIndex = 0
     var gridImages = ["a","b","c","d","e","f","g","h","i","j"]
- 
-
+    var backgroundImages = ["adv","birr","faith","happy","lead","lovely","marri","mix","success","thunder"]
+    static var images = ""
+    static var contentDetail = [String]()
+    static var maxTextCount = 0
+    var contentArray = [String]()
+    var contentString = ""
     let gridCellIdentifier = "collectionCell"
-    
-    
- 
+    let gridToDetailTransition = TransitionAnimation()
+   
+    enum jsonError: Error {
+        
+        case failed(String)
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +49,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+       
     }
     
 
@@ -87,17 +93,71 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
         
-        if(indexPath.row == 0) {
-            
-            let detailViewController = self.storyboard?.instantiateViewController(withIdentifier: "detailOne") as! detailOne
-            let navigationViewer = UINavigationController (rootViewController: detailViewController)
-            navigationViewer.transitioningDelegate = self
-            navigationViewer.navigationBar.barTintColor = UIColor.black
-            present(navigationViewer, animated: true,completion: nil)
-            
- }
+        let detailViewController = self.storyboard?.instantiateViewController(withIdentifier: "detailOne") as! detailOne
+        let navigationViewer = UINavigationController (rootViewController: detailViewController)
+        navigationViewer.transitioningDelegate = self
+        present(navigationViewer, animated: true,completion: nil)
         
-  
+        switch indexPath.row {
+   
+        case 0:
+            imageIndex = 0
+            contentString = "contentOne"
+            ViewController.maxTextCount = 60
+            break
+        case 1:
+            imageIndex = 1
+            contentString = "contentTwo"
+            ViewController.maxTextCount = 71
+            break
+        case 2:
+            imageIndex = 2
+            contentString = "contentThree"
+            ViewController.maxTextCount = 68
+            break
+        case 3:
+            imageIndex = 3
+            contentString = "contentFour"
+            ViewController.maxTextCount = 80
+            break
+        case 4:
+            imageIndex = 4
+            contentString = "contentFive"
+            ViewController.maxTextCount = 64
+            break
+        case 5:
+            imageIndex = 5
+            contentString = "contentSix"
+            ViewController.maxTextCount = 68
+            break
+        case 6:
+            imageIndex = 6
+            contentString = "contentSeven"
+            ViewController.maxTextCount = 68
+            break
+        case 7:
+            imageIndex = 7
+            contentString = "contentEight"
+            ViewController.maxTextCount = 74
+            break
+        case 8:
+            imageIndex = 8
+            contentString = "contentNine"
+            ViewController.maxTextCount = 83
+            break
+        case 9:
+            imageIndex = 9
+            contentString = "contentTen"
+            ViewController.maxTextCount = 70
+            break
+        default:
+            print("There is a problem with index.Please Check the codes!")
+            
+        }
+        
+        ViewController.images = backgroundImages[imageIndex]
+        ViewController.contentDetail = retrieveJson()
+
     }
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -108,11 +168,33 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         return nil
     }
     
-    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){
-        
-    }
-
+    func retrieveJson() -> [String] {
     
+        do {
+            
+            if let file = Bundle.main.url(forResource: "myArray", withExtension: "json"){
+                let data = try Data(contentsOf: file)
+                let myArray = try JSONSerialization.jsonObject(with: data, options:[])
+                
+                if let contentDictionary = myArray as? [String: Any]{
+                    
+                    contentArray = (contentDictionary[contentString] as? [String])!
+             
+                }
+                
+            }
+            
+        }  catch {
+            print(jsonError.failed("Failed to Serialize Json file"))
+             
+        }
+        
+        return contentArray
+    
+    }
+    
+    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){ }
+
         
     }
 

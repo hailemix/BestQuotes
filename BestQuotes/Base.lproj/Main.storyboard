@@ -84,9 +84,7 @@
         <scene sceneID="ERQ-eY-MW6">
             <objects>
                 <navigationController modalTransitionStyle="crossDissolve" id="pbJ-K8-LnJ" sceneMemberID="viewController">
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="414" height="736"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0gM-6A-uAW">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="0gM-6A-uAW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -107,20 +105,19 @@
                         <viewControllerLayoutGuide type="bottom" id="c9v-iY-RdW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ctM-1a-f9I">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SkN-Gs-NSp">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="-64" width="414" height="736"/>
                                 <gestureRecognizers/>
                             </scrollView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="success" translatesAutoresizingMaskIntoConstraints="NO" id="v2k-sX-ll3">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <color key="backgroundColor" red="0.99392062425613403" green="0.049695082008838654" blue="0.32055583596229553" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" red="1" green="0.20373919469999999" blue="0.29233046019999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v2k-sX-ll3">
+                                <rect key="frame" x="0.0" y="-64" width="414" height="736"/>
+                                <color key="tintColor" red="1" green="0.4131924959336859" blue="0.43415229620495965" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8D-xD-MKA">
-                                <rect key="frame" x="20" y="692" width="36" height="36"/>
+                                <rect key="frame" x="20" y="628" width="36" height="36"/>
                                 <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="34"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="share"/>
@@ -129,7 +126,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="krj-HL-R0y">
-                                <rect key="frame" x="20" y="197" width="374" height="343"/>
+                                <rect key="frame" x="20" y="133" width="368" height="450"/>
                                 <gestureRecognizers/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="34"/>
@@ -139,20 +136,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="c9v-iY-RdW" firstAttribute="top" secondItem="o8D-xD-MKA" secondAttribute="bottom" constant="8" symbolic="YES" id="02e-Mu-Qzq"/>
-                            <constraint firstItem="v2k-sX-ll3" firstAttribute="top" secondItem="ctM-1a-f9I" secondAttribute="top" id="B59-lc-lHx"/>
-                            <constraint firstItem="krj-HL-R0y" firstAttribute="top" secondItem="OMe-4Q-N12" secondAttribute="bottom" constant="133" id="Kcd-CE-25W"/>
-                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="centerY" secondItem="krj-HL-R0y" secondAttribute="centerY" id="QkJ-R5-9U6"/>
-                            <constraint firstItem="v2k-sX-ll3" firstAttribute="bottom" secondItem="c9v-iY-RdW" secondAttribute="top" id="UEk-Fi-7sQ"/>
-                            <constraint firstItem="krj-HL-R0y" firstAttribute="leading" secondItem="o8D-xD-MKA" secondAttribute="leading" id="VlX-PJ-yZm"/>
-                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="bottom" secondItem="c9v-iY-RdW" secondAttribute="top" id="Vx7-Sw-H3s"/>
-                            <constraint firstItem="v2k-sX-ll3" firstAttribute="leading" secondItem="SkN-Gs-NSp" secondAttribute="leading" id="ckJ-7o-L3Y"/>
-                            <constraint firstItem="v2k-sX-ll3" firstAttribute="leading" secondItem="ctM-1a-f9I" secondAttribute="leading" id="few-4c-X1N"/>
-                            <constraint firstAttribute="trailing" secondItem="SkN-Gs-NSp" secondAttribute="trailing" id="gHz-pe-K5Y"/>
-                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="trailing" secondItem="v2k-sX-ll3" secondAttribute="trailing" id="iqp-pA-gNb"/>
-                            <constraint firstItem="krj-HL-R0y" firstAttribute="leading" secondItem="ctM-1a-f9I" secondAttribute="leadingMargin" id="mkY-F4-YBP"/>
-                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="top" secondItem="v2k-sX-ll3" secondAttribute="top" id="o7u-1a-kxd"/>
-                            <constraint firstItem="v2k-sX-ll3" firstAttribute="centerX" secondItem="krj-HL-R0y" secondAttribute="centerX" id="tZ1-sE-4pD"/>
+                            <constraint firstItem="o8D-xD-MKA" firstAttribute="top" secondItem="krj-HL-R0y" secondAttribute="bottom" constant="45" id="3LX-fq-N7x"/>
+                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="trailing" secondItem="v2k-sX-ll3" secondAttribute="trailing" id="4Ld-i4-jiv"/>
+                            <constraint firstItem="krj-HL-R0y" firstAttribute="top" secondItem="OMe-4Q-N12" secondAttribute="bottom" constant="133" id="4PZ-Ef-nzW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="krj-HL-R0y" secondAttribute="trailing" constant="6" id="56E-Ps-5go"/>
+                            <constraint firstItem="v2k-sX-ll3" firstAttribute="leading" secondItem="SkN-Gs-NSp" secondAttribute="leading" id="D5i-hv-Cne"/>
+                            <constraint firstItem="krj-HL-R0y" firstAttribute="leading" secondItem="o8D-xD-MKA" secondAttribute="leading" id="DWU-3O-qhP"/>
+                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="bottom" secondItem="c9v-iY-RdW" secondAttribute="top" id="Dun-gD-Vkx"/>
+                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="top" secondItem="ctM-1a-f9I" secondAttribute="topMargin" constant="-64" id="IRF-Jz-oqG"/>
+                            <constraint firstItem="v2k-sX-ll3" firstAttribute="bottom" secondItem="c9v-iY-RdW" secondAttribute="top" id="awR-ga-KVM"/>
+                            <constraint firstItem="krj-HL-R0y" firstAttribute="leading" secondItem="ctM-1a-f9I" secondAttribute="leadingMargin" id="cBh-ae-Lgr"/>
+                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="top" secondItem="v2k-sX-ll3" secondAttribute="top" id="cVF-DS-xOr"/>
+                            <constraint firstItem="c9v-iY-RdW" firstAttribute="top" secondItem="o8D-xD-MKA" secondAttribute="bottom" constant="8" symbolic="YES" id="jMQ-oa-4gR"/>
+                            <constraint firstAttribute="trailing" secondItem="v2k-sX-ll3" secondAttribute="trailing" id="qzw-Nc-i43"/>
+                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="leading" secondItem="ctM-1a-f9I" secondAttribute="leading" id="zR7-7W-b9h"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0yF-Yw-bBQ">
@@ -199,6 +196,5 @@
     <resources>
         <image name="home" width="36" height="36"/>
         <image name="share" width="36" height="36"/>
-        <image name="success" width="638" height="422"/>
     </resources>
 </document>
