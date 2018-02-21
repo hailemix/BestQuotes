@@ -19,15 +19,15 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
     @IBOutlet var textView: UITextView!
     @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var toolBar: UIToolbar!
-
+    
     var screenSize : CGRect!
     var textIndex = 0
     var bannerView : GADBannerView!
     var interstitial: GADInterstitial!
     static var interstitialCounter = 0
-   
-   
-
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,16 +35,14 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
-        
-         UIApplication.shared.statusBarStyle = .lightContent
-        
+        UIApplication.shared.statusBarStyle = .lightContent
         
         self.imageView.addSubview(textView)
         textView.textAlignment = .center
         textView.text = ViewController.contentDetail[textIndex]
         textView.isUserInteractionEnabled = true
         imageView.isUserInteractionEnabled = true
-     
+        
         let swipeRight = UISwipeGestureRecognizer(target : self, action: #selector(self.swipeRecognize(gesture:)))
         swipeRight.direction = .right
         self.imageView.addGestureRecognizer(swipeRight)
@@ -56,79 +54,78 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
         imageView.image = UIImage(contentsOfFile: imagePath!)
         
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
-         bannerView.adUnitID = "ca-app-pub-9156727777369518/3629976607"
+        bannerView.adUnitID = "ca-app-pub-9156727777369518/3629976607"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         addBannerViewToView(bannerView)
         interstitial = createAndLoadInterstitial()
         
-        }
-
+    }
+    
     func swipeRecognize(gesture : UIGestureRecognizer) {
         
-    if let swipeGesture = gesture as? UISwipeGestureRecognizer {
-        
-        if(textIndex % 5 == 0 && textIndex >= 5) {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
             
-         interstitialForSwipeGesture()
-            
-        }
-        
-        
-        if(imageView != nil) {
-        
-        switch swipeGesture.direction {
-            
-        case UISwipeGestureRecognizerDirection.right:
-          
-            textIndex = textIndex - 1
-            textView.textColor = UIColor.yellow
-            if(textIndex < 0) {
+            if(imageView != nil) {
                 
-            textIndex = 0
-        
-            } else {
-            
-            animateNextText()
+                if(textIndex % 5 == 0 && textIndex >= 5) {
+                    
+                    interstitialForSwipeGesture()
+                    
+                }
+                
+                switch swipeGesture.direction {
+                    
+                case UISwipeGestureRecognizerDirection.right:
+                    
+                    textIndex = textIndex - 1
+                    textView.textColor = UIColor.yellow
+                    if(textIndex < 0) {
+                        
+                        textIndex = 0
+                        
+                    } else {
+                        
+                        animateNextText()
+                        
+                    }
+                    
+                case UISwipeGestureRecognizerDirection.left:
+                    
+                    textIndex = textIndex + 1
+                    textView.textColor = UIColor.white
+                    
+                    if(textIndex  > ViewController.maxTextCount) {
+                        
+                        textIndex = ViewController.maxTextCount
+                        
+                    } else {
+                        
+                        animateNextText()
+                    }
+                    
+                default:
+                    break
+                }
+                
+                textView.text = ViewController.contentDetail[textIndex]
                 
             }
-        
-        case UISwipeGestureRecognizerDirection.left:
             
-        textIndex = textIndex + 1
-        textView.textColor = UIColor.white
-           
-            if(textIndex  > ViewController.maxTextCount) {
-                
-                textIndex = ViewController.maxTextCount
-            
-            } else {
-        
-                animateNextText()
-           }
-            
-        default:
-            break
         }
-
-        textView.text = ViewController.contentDetail[textIndex]
-        
-        }
-        
-    }
         
     }
     
     @IBAction func share(_ sender: UIButton) {
         
-            self.textView.text = ViewController.contentDetail[textIndex]
-            let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [textView.text],applicationActivities: nil)
-            activityViewController.popoverPresentationController?.sourceView = (sender)
-            activityViewController.excludedActivityTypes = [UIActivityType.assignToContact,UIActivityType.saveToCameraRoll,UIActivityType.copyToPasteboard]
-            self.present(activityViewController,animated:true,completion:nil)
+        self.textView.text = ViewController.contentDetail[textIndex]
+        let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [textView.text],applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = (sender)
+        activityViewController.excludedActivityTypes = [UIActivityType.assignToContact,UIActivityType.saveToCameraRoll,UIActivityType.copyToPasteboard]
+        self.present(activityViewController,animated:true,completion:nil)
         
     }
-
+    
     func animateNextText()   {
         
         let nextText : String = self.textView.text
@@ -136,19 +133,18 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
     }
     
     func addBannerViewToView(_ bannerView : GADBannerView){
-    
-    bannerView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(bannerView)
         
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
         view.addConstraints([
             
             NSLayoutConstraint(item:bannerView,
-            attribute: .top,
-            relatedBy: .equal,
-            toItem: topLayoutGuide,
-            attribute: .top,
-            multiplier: 1,
-            constant: 65),
+                               attribute: .top,
+                               relatedBy: .equal,
+                               toItem: topLayoutGuide,
+                               attribute: .top,
+                               multiplier: 1,
+                               constant: 65),
             
             NSLayoutConstraint(item:bannerView,
                                attribute: .centerX,
@@ -157,33 +153,33 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
                                attribute: .centerX,
                                multiplier: 1,
                                constant: 0) ])
-    
+        
     }
     
     func createAndLoadInterstitial() -> GADInterstitial {
-    
-       interstitial = GADInterstitial(adUnitID: "ca-app-pub-9156727777369518/2648067429")          
+        
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-9156727777369518/2648067429")
         interstitial.load(GADRequest())
         interstitial.delegate = self
         return interstitial
     }
     
     func interstitialForSwipeGesture() {
-    
-        if(interstitial != nil){
         
+        if(interstitial != nil){
+            
             if interstitial!.isReady {
                 
-            interstitial.present(fromRootViewController: self)
-            
+                interstitial.present(fromRootViewController: self)
+                
             } else {
                 
-            print("Ad is not ready yet!")
-            
+                print("Ad is not ready yet!")
+                
             }
-
+            
         }
-
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -194,5 +190,5 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
         interstitialForSwipeGesture()
         
     }
-
+    
 }

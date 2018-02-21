@@ -9,11 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout,UIViewControllerTransitioningDelegate{
-
+    
     @IBOutlet weak var MyCollectionView: UICollectionView!
     
     var screenSize : CGRect!
-    var screenWidth: CGFloat!  
+    var screenWidth: CGFloat!
     var screenHeight : CGFloat!
     var backDurationTime: Double = 1.0
     var contentFromArray : UITextView!
@@ -27,13 +27,13 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     var contentString = ""
     let gridCellIdentifier = "collectionCell"
     let gridToDetailTransition = TransitionAnimation()
-   
+    
     enum jsonError: Error {
         
         case failed(String)
     }
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,20 +44,20 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         screenSize = UIScreen.main.bounds
         screenWidth = screenSize.width
         screenHeight = screenSize.height
-       
+        
     }
-
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+        
     {
         return gridImages.count
     }
     
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: gridCellIdentifier, for: indexPath) as! MyCollectionViewCell
-
+        
         cell.myImage.image = UIImage(named: gridImages[indexPath.row])
         return cell
     }
@@ -69,7 +69,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         return (myInsets)
     }
     
-  
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -85,7 +85,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
+        
         
         let detailViewController = self.storyboard?.instantiateViewController(withIdentifier: "detailOne") as! detailOne
         let navigationViewer = UINavigationController (rootViewController: detailViewController)
@@ -93,7 +93,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         present(navigationViewer, animated: true,completion: nil)
         
         switch indexPath.row {
-   
+            
         case 0:
             imageIndex = 0
             contentString = "contentOne"
@@ -160,7 +160,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         
         ViewController.images = backgroundImages[imageIndex]
         ViewController.contentDetail = retrieveJson()
-
+        
     }
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -172,7 +172,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     }
     
     func retrieveJson() -> [String] {
-    
+        
         do {
             
             if let file = Bundle.main.url(forResource: "myArray", withExtension: "json"){
@@ -182,26 +182,26 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                 if let contentDictionary = myArray as? [String: Any]{
                     
                     contentArray = (contentDictionary[contentString] as? [String])!
-             
+                    
                 }
                 
             }
             
         }  catch {
             print(jsonError.failed("Failed to Serialize Json file"))
-             
+            
         }
         
         return contentArray
-    
+        
     }
     
     @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){
-    
-         UIApplication.shared.statusBarStyle = .default
-      }
-    
+        
+        UIApplication.shared.statusBarStyle = .default
     }
+    
+}
 
 
 
