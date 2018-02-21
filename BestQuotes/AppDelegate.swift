@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
         FirebaseApp.configure()
         GADMobileAds.configure(withApplicationID: "ca-app-pub-9156727777369518~9788190845")
         application.registerForRemoteNotifications()
-        
+    
         if #available(iOS 10.0, *) {
             
         UNUserNotificationCenter.current().delegate = self
@@ -41,6 +41,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
         Messaging.messaging().delegate = self
         let token = Messaging.messaging().fcmToken
         print("FCM token: \(token ?? "")")
+        
+        
 
         return true
     }

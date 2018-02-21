@@ -44,7 +44,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         screenSize = UIScreen.main.bounds
         screenWidth = screenSize.width
         screenHeight = screenSize.height
-
+       
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
@@ -198,9 +198,9 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     
     @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){
     
+         UIApplication.shared.statusBarStyle = .default
       }
     
-
     }
 
 

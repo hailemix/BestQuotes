@@ -36,6 +36,8 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
         
+         UIApplication.shared.statusBarStyle = .lightContent
+        
         
         self.imageView.addSubview(textView)
         textView.textAlignment = .center
@@ -154,9 +156,7 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
                                toItem: view,
                                attribute: .centerX,
                                multiplier: 1,
-                               constant: 0)
-            ])
-    
+                               constant: 0) ])
     
     }
     
