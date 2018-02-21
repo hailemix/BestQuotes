@@ -47,12 +47,6 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
 
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-       
-    }
-    
-
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     
     {
@@ -105,36 +99,43 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             contentString = "contentOne"
             ViewController.maxTextCount = 60
             break
+            
         case 1:
             imageIndex = 1
             contentString = "contentTwo"
             ViewController.maxTextCount = 71
             break
+            
         case 2:
             imageIndex = 2
             contentString = "contentThree"
             ViewController.maxTextCount = 68
             break
+            
         case 3:
             imageIndex = 3
             contentString = "contentFour"
             ViewController.maxTextCount = 80
             break
+            
         case 4:
             imageIndex = 4
             contentString = "contentFive"
             ViewController.maxTextCount = 64
             break
+            
         case 5:
             imageIndex = 5
             contentString = "contentSix"
             ViewController.maxTextCount = 68
             break
+            
         case 6:
             imageIndex = 6
             contentString = "contentSeven"
             ViewController.maxTextCount = 68
             break
+            
         case 7:
             imageIndex = 7
             contentString = "contentEight"
@@ -145,13 +146,15 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             contentString = "contentNine"
             ViewController.maxTextCount = 83
             break
+            
         case 9:
             imageIndex = 9
             contentString = "contentTen"
             ViewController.maxTextCount = 70
             break
+            
         default:
-            print("There is a problem with index.Please Check the codes!")
+            print("There is a problem with index.Please Check the code!")
             
         }
         
@@ -193,9 +196,11 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     
     }
     
-    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){ }
+    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){
+    
+      }
+    
 
-        
     }
 
 

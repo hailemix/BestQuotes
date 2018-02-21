@@ -7,16 +7,48 @@
 //
 
 import UIKit
+import Firebase
+import UserNotifications
+
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDelegate,MessagingDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+     
+        
+        FirebaseApp.configure()
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-9156727777369518~9788190845")
+        application.registerForRemoteNotifications()
+        
+        if #available(iOS 10.0, *) {
+            
+        UNUserNotificationCenter.current().delegate = self
+            
+            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+            UNUserNotificationCenter.current().requestAuthorization(
+                options: authOptions,
+                completionHandler: {_, _ in}
+            ) } else {
+        
+            let setting: UIUserNotificationSettings = UIUserNotificationSettings(
+                types: [.alert, .badge, .sound],categories:nil)
+            application.registerUserNotificationSettings(setting)
+         }
+        Messaging.messaging().delegate = self
+        let token = Messaging.messaging().fcmToken
+        print("FCM token: \(token ?? "")")
+
         return true
+    }
+    
+    func messaging(_ messaging : Messaging, didReceiveRegistrationToken fcmToken: String){
+        
+    print("Firebase registration token: \(fcmToken)")
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
