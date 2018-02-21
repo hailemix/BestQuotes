@@ -15,7 +15,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Best World Quotes-->
+        <!--የዓለም ምርጥ ጥቅሶች-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" id="BYZ-38-t0r" customClass="ViewController" customModule="BestQuotes" customModuleProvider="target" sceneMemberID="viewController">
@@ -70,7 +70,7 @@
                             <constraint firstItem="CsG-xr-E36" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="q2C-TY-6Cl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Best World Quotes" id="IVG-Rd-qzz"/>
+                    <navigationItem key="navigationItem" title="የዓለም ምርጥ ጥቅሶች" id="IVG-Rd-qzz"/>
                     <connections>
                         <outlet property="MyCollectionView" destination="CsG-xr-E36" id="VJA-hI-NgN"/>
                         <segue destination="pbJ-K8-LnJ" kind="presentation" identifier="zDetailPresenter" id="lj8-2k-Xha"/>
