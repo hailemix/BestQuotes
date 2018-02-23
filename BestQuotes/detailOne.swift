@@ -164,7 +164,7 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
     
     func interstitialForSwipeGesture() {
         
-        if(interstitial != nil){
+        if (interstitial != nil) {
             
             if interstitial!.isReady {
                 

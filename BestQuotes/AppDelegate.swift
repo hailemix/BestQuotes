@@ -24,8 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
     
         if #available(iOS 10.0, *) {
             
-        UNUserNotificationCenter.current().delegate = self
-            
+            UNUserNotificationCenter.current().delegate = self
             let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
             UNUserNotificationCenter.current().requestAuthorization(
                 options: authOptions,
@@ -48,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
     
     func messaging(_ messaging : Messaging, didReceiveRegistrationToken fcmToken: String){
         
-    print("Firebase registration token: \(fcmToken)")
+      print("Firebase registration token: \(fcmToken)")
         
     }
 

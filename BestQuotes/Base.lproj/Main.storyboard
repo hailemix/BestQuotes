@@ -84,7 +84,7 @@
         <scene sceneID="ERQ-eY-MW6">
             <objects>
                 <navigationController modalTransitionStyle="crossDissolve" id="pbJ-K8-LnJ" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="0gM-6A-uAW">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="0gM-6A-uAW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
