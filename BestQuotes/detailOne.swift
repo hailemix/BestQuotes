@@ -12,7 +12,6 @@ import GoogleMobileAds
 
 class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,GADBannerViewDelegate {
     
-    
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var pageControl: UIPageControl!
@@ -25,8 +24,6 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
     var bannerView : GADBannerView!
     var interstitial: GADInterstitial!
     static var interstitialCounter = 0
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +47,7 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
         let swipeLeft = UISwipeGestureRecognizer(target : self, action: #selector(self.swipeRecognize(gesture:)))
         swipeLeft.direction = .left
         self.imageView.addGestureRecognizer(swipeLeft)
+        
         let imagePath = Bundle.main.path(forResource:ViewController.images, ofType: "jpg")
         imageView.image = UIImage(contentsOfFile: imagePath!)
         
@@ -175,7 +173,6 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
             } else {
                 
                 print("Ad is not ready yet!")
-                
             }
             
         }
@@ -188,7 +185,6 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
         view.backgroundColor = UIColor.black
         self.textView.text = "Your Phone Memory is busy.Please close other apps."
         interstitialForSwipeGesture()
-        
     }
     
 }

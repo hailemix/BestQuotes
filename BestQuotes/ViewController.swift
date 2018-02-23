@@ -32,8 +32,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         
         case failed(String)
     }
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,11 +47,9 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
-        
     {
         return gridImages.count
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
@@ -61,15 +58,12 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         cell.myImage.image = UIImage(named: gridImages[indexPath.row])
         return cell
     }
-    
-    
+        
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
         let myInsets = UIEdgeInsetsMake(2, 2, 2, 2)
         return (myInsets)
     }
-    
-    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -85,7 +79,6 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         
         let detailViewController = self.storyboard?.instantiateViewController(withIdentifier: "detailOne") as! detailOne
         let navigationViewer = UINavigationController (rootViewController: detailViewController)
@@ -164,7 +157,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     }
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return gridToDetailTransition
+         return gridToDetailTransition
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -175,20 +168,20 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         
         do {
             
-            if let file = Bundle.main.url(forResource: "myArray", withExtension: "json"){
+            if  let file = Bundle.main.url(forResource: "myArray", withExtension: "json"){
                 let data = try Data(contentsOf: file)
                 let myArray = try JSONSerialization.jsonObject(with: data, options:[])
                 
-                if let contentDictionary = myArray as? [String: Any]{
+                  if let contentDictionary = myArray as? [String: Any]{
                     
-                    contentArray = (contentDictionary[contentString] as? [String])!
+                     contentArray = (contentDictionary[contentString] as? [String])!
                     
                 }
-                
             }
             
         }  catch {
-            print(jsonError.failed("Failed to Serialize Json file"))
+            
+             print(jsonError.failed("Failed to Serialize Json file"))
             
         }
         

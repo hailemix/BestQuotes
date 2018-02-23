@@ -16,10 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
      
-        
         FirebaseApp.configure()
         GADMobileAds.configure(withApplicationID: "ca-app-pub-9156727777369518~9788190845")
         application.registerForRemoteNotifications()
@@ -31,20 +29,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
             let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
             UNUserNotificationCenter.current().requestAuthorization(
                 options: authOptions,
-                completionHandler: {_, _ in}
-            ) } else {
+                completionHandler: {_, _ in} )
+                                }
+            
+        else {
         
-            let setting: UIUserNotificationSettings = UIUserNotificationSettings(
+                let setting: UIUserNotificationSettings = UIUserNotificationSettings(
                 types: [.alert, .badge, .sound],categories:nil)
-            application.registerUserNotificationSettings(setting)
+                application.registerUserNotificationSettings(setting)
          }
+        
         Messaging.messaging().delegate = self
         let token = Messaging.messaging().fcmToken
         print("FCM token: \(token ?? "")")
         
-        
-
-        return true
+           return true
     }
     
     func messaging(_ messaging : Messaging, didReceiveRegistrationToken fcmToken: String){
