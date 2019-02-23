@@ -61,7 +61,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
-        let myInsets = UIEdgeInsetsMake(2, 2, 2, 2)
+        let myInsets = UIEdgeInsets.init(top: 2, left: 2, bottom: 2, right: 2)
         return (myInsets)
     }
     
@@ -152,7 +152,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         }
         
         ViewController.images = backgroundImages[imageIndex]
-        ViewController.contentDetail = retrieveJson()
+        ViewController.contentDetail = retrieveFromJson()
         
     }
     
@@ -164,7 +164,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         return nil
     }
     
-    func retrieveJson() -> [String] {
+    func retrieveFromJson() -> [String] {
         
         do {
             
@@ -190,10 +190,11 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     }
     
     @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){
-        
-        UIApplication.shared.statusBarStyle = .default
+       
     }
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .default
+    }
 }
 
 

@@ -32,7 +32,7 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
-        UIApplication.shared.statusBarStyle = .lightContent
+        
         
         self.imageView.addSubview(textView)
         textView.textAlignment = .center
@@ -50,6 +50,8 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
         
         let imagePath = Bundle.main.path(forResource:ViewController.images, ofType: "jpg")
         imageView.image = UIImage(contentsOfFile: imagePath!)
+        imageView.autoresizesSubviews = true
+        
         
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
         bannerView.adUnitID = "ca-app-pub-9156727777369518/3629976607"
@@ -60,7 +62,11 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
         
     }
     
-    func swipeRecognize(gesture : UIGestureRecognizer) {
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .default
+    }
+    
+    @objc func swipeRecognize(gesture : UIGestureRecognizer) {
         
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
             
@@ -74,7 +80,7 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
                 
                 switch swipeGesture.direction {
                     
-                case UISwipeGestureRecognizerDirection.right:
+                case UISwipeGestureRecognizer.Direction.right:
                     
                     textIndex = textIndex - 1
                     textView.textColor = UIColor.yellow
@@ -88,7 +94,7 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
                         
                     }
                     
-                case UISwipeGestureRecognizerDirection.left:
+                case UISwipeGestureRecognizer.Direction.left:
                     
                     textIndex = textIndex + 1
                     textView.textColor = UIColor.white
@@ -119,7 +125,7 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
         self.textView.text = ViewController.contentDetail[textIndex]
         let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [textView.text],applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = (sender)
-        activityViewController.excludedActivityTypes = [UIActivityType.assignToContact,UIActivityType.saveToCameraRoll,UIActivityType.copyToPasteboard]
+        activityViewController.excludedActivityTypes = [UIActivity.ActivityType.assignToContact,UIActivity.ActivityType.saveToCameraRoll,UIActivity.ActivityType.copyToPasteboard]
         self.present(activityViewController,animated:true,completion:nil)
         
     }

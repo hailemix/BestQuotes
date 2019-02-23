@@ -49,7 +49,7 @@ class TransitionAnimation: NSObject,UIViewControllerAnimatedTransitioning {
         
         
         containerView.addSubview(toView)
-        containerView.bringSubview(toFront: detailView!)
+        containerView.bringSubviewToFront(detailView!)
         
         UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.0, options: .curveEaseIn,
                        animations: {
