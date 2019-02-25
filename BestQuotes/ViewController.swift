@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout,UIViewControllerTransitioningDelegate{
+class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UIViewControllerTransitioningDelegate{
     
     @IBOutlet weak var MyCollectionView: UICollectionView!
     
