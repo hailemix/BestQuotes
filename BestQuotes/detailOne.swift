@@ -50,8 +50,6 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
         
         let imagePath = Bundle.main.path(forResource:ViewController.images, ofType: "jpg")
         imageView.image = UIImage(contentsOfFile: imagePath!)
-        imageView.autoresizesSubviews = true
-        
         
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
         bannerView.adUnitID = "ca-app-pub-9156727777369518/3629976607"
