@@ -36,7 +36,7 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
         
         self.imageView.addSubview(textView)
         textView.textAlignment = .center
-        textView.text = ViewController.contentDetail[textIndex]
+        textView.text = ViewController.contentDetail[0]
         textView.isUserInteractionEnabled = true
         imageView.isUserInteractionEnabled = true
         
@@ -51,8 +51,14 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
         let imagePath = Bundle.main.path(forResource:ViewController.images, ofType: "jpg")
         imageView.image = UIImage(contentsOfFile: imagePath!)
         
-        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+        
+        /*
+         This is the real Banner Ad ID
         bannerView.adUnitID = "ca-app-pub-9156727777369518/3629976607"
+ 
+        */
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         addBannerViewToView(bannerView)
@@ -70,7 +76,7 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
             
             if(imageView != nil) {
                 
-                if(textIndex % 5 == 0 && textIndex >= 5) {
+                if(textIndex % 8 == 0 && textIndex >= 8) {
                     
                     interstitialForSwipeGesture()
                     
@@ -146,7 +152,7 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
                                toItem: topLayoutGuide,
                                attribute: .top,
                                multiplier: 1,
-                               constant: 65),
+                               constant: 120),
             
             NSLayoutConstraint(item:bannerView,
                                attribute: .centerX,
@@ -160,7 +166,13 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
     
     func createAndLoadInterstitial() -> GADInterstitial {
         
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-9156727777369518/2648067429")
+        /*
+         This is real test ad
+         interstitial = GADInterstitial(adUnitID: "ca-app-pub-9156727777369518/2648067429")
+         *
+         *
+         */
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
         interstitial.load(GADRequest())
         interstitial.delegate = self
         return interstitial

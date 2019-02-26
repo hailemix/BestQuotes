@@ -23,7 +23,8 @@ class TransitionAnimation: NSObject,UIViewControllerAnimatedTransitioning {
         
         let containerView = transitionContext.containerView
         let toView = transitionContext.view(forKey: .to)!
-        let detailView = presenting ? toView : transitionContext.view(forKey: .from)
+        let fromView = transitionContext.view(forKey: .from)
+        let detailView = presenting ? toView : fromView
         
         let initialFrame = presenting ? originFrame : detailView!.frame
         let finalFrame = presenting ? detailView!.frame : originFrame
@@ -40,26 +41,20 @@ class TransitionAnimation: NSObject,UIViewControllerAnimatedTransitioning {
         let scaleTransform = CGAffineTransform(scaleX: xScaleFactor,y: yScaleFactor)
         
         if(presenting) {
-        detailView!.transform = scaleTransform
-            detailView!.center = CGPoint(
-                x: initialFrame.midX,
-                y: initialFrame.midY )
-        
+            detailView!.transform = scaleTransform
+            detailView!.center = CGPoint(x: initialFrame.midX,y: initialFrame.midY)
         }
-        
-        
         containerView.addSubview(toView)
         containerView.bringSubviewToFront(detailView!)
         
         UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.0, options: .curveEaseIn,
-                       animations: {
-        detailView!.transform = self.presenting ?
-            CGAffineTransform.identity : scaleTransform
-            detailView!.center = CGPoint(x: finalFrame.midX, y: finalFrame.midY)
-        },
-                       completion: { _ in transitionContext.completeTransition(true)
+                       animations: { detailView!.transform = self.presenting ? CGAffineTransform.identity : scaleTransform
+                                     detailView!.center = CGPoint(x: finalFrame.midX, y: finalFrame.midY)
+                        
+                                   },
+            completion: { _ in transitionContext.completeTransition(true)
         })
-    
+        
 
 }
 }
