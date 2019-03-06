@@ -30,6 +30,8 @@
 		CE8298B81F700E3A00BC3C0F /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8298B71F700E3A00BC3C0F /* MyCollectionViewCell.swift */; };
 		CE8317521FBC3BF00014DF68 /* TransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8317511FBC3BEF0014DF68 /* TransitionAnimation.swift */; };
 		CEF62B831F729E10001C6BF3 /* detailOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF62B821F729E10001C6BF3 /* detailOne.swift */; };
+		E27A8628223068AA00C387E6 /* ZGridAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27A8627223068AA00C387E6 /* ZGridAnimation.swift */; };
+		E27A8629223068AA00C387E6 /* ZGridAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27A8627223068AA00C387E6 /* ZGridAnimation.swift */; };
 		F0859B7C36AD6809E9FC9B59 /* Pods_BestQuotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47174469C070297099D99CA3 /* Pods_BestQuotes.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,7 @@
 		CE8298B71F700E3A00BC3C0F /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE8317511FBC3BEF0014DF68 /* TransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimation.swift; sourceTree = "<group>"; };
 		CEF62B821F729E10001C6BF3 /* detailOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailOne.swift; sourceTree = "<group>"; };
+		E27A8627223068AA00C387E6 /* ZGridAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZGridAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +144,7 @@
 				CE8298B71F700E3A00BC3C0F /* MyCollectionViewCell.swift */,
 				CE8298991F700B4500BC3C0F /* ViewController.swift */,
 				CE8298971F700B4500BC3C0F /* AppDelegate.swift */,
+				E27A8627223068AA00C387E6 /* ZGridAnimation.swift */,
 			);
 			name = "All Swift Codes";
 			sourceTree = "<group>";
@@ -444,6 +448,7 @@
 				CE8317521FBC3BF00014DF68 /* TransitionAnimation.swift in Sources */,
 				CE82989A1F700B4500BC3C0F /* ViewController.swift in Sources */,
 				CE8298981F700B4500BC3C0F /* AppDelegate.swift in Sources */,
+				E27A8628223068AA00C387E6 /* ZGridAnimation.swift in Sources */,
 				CE8298B81F700E3A00BC3C0F /* MyCollectionViewCell.swift in Sources */,
 				CEF62B831F729E10001C6BF3 /* detailOne.swift in Sources */,
 			);
@@ -454,6 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE8298AD1F700B4500BC3C0F /* BestQuotesTests.swift in Sources */,
+				E27A8629223068AA00C387E6 /* ZGridAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
