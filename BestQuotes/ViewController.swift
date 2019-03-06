@@ -58,9 +58,9 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         UIView.animate(withDuration: 0.8, delay: 0.5*Double(indexPath.row),usingSpringWithDamping: 1,initialSpringVelocity: 0.4,
                        options:indexPath.row % 3 == 0 ?.transitionFlipFromLeft : .transitionFlipFromRight, animations: {
                         if indexPath.row % 3 == 0 {
-                            ZGridAnimation.viewSlideInFromLeft(toRight: cell)
+                            TransitionAnimation.viewSlideInFromLeft(toRight: cell)
                         } else {
-                            ZGridAnimation.viewSlideInFromRight(toLeft: cell)
+                            TransitionAnimation.viewSlideInFromRight(toLeft: cell)
                         }
         } , completion: nil)
         cell.myImage.image = UIImage(named: gridImages[indexPath.row])
