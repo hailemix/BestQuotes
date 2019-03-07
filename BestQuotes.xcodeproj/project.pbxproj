@@ -29,6 +29,7 @@
 		CE8317521FBC3BF00014DF68 /* TransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8317511FBC3BEF0014DF68 /* TransitionAnimation.swift */; };
 		CEF62B831F729E10001C6BF3 /* detailOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF62B821F729E10001C6BF3 /* detailOne.swift */; };
 		E27A864922344D8700C387E6 /* mix.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E27A864822344D8700C387E6 /* mix.jpg */; };
+		E27A864B22344D8700C387E6 /* lovely.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E27A864A22344D8700C387E6 /* lovely.jpg */; };
 		E7C44C0F5F58C0F680E19058 /* Pods_BestQuotesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C393E0218C0B51D653CFAD6 /* Pods_BestQuotesTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		CE8317511FBC3BEF0014DF68 /* TransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimation.swift; sourceTree = "<group>"; };
 		CEF62B821F729E10001C6BF3 /* detailOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailOne.swift; sourceTree = "<group>"; };
 		E27A864822344D8700C387E6 /* mix.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mix.jpg; sourceTree = "<group>"; };
+		E27A864A22344D8700C387E6 /* lovely.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lovely.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		CE0897F720358446000F01BC /* Background Images */ = {
 			isa = PBXGroup;
 			children = (
+				E27A864A22344D8700C387E6 /* lovely.jpg */,
 				E27A864822344D8700C387E6 /* mix.jpg */,
 				CE138183203C99CA00B61B4B /* marri.jpg */,
 				CE36D2A6203C486900ECE1ED /* birr.jpg */,
@@ -300,6 +303,7 @@
 				CE36D299203C191D00ECE1ED /* adv.jpg in Resources */,
 				CE36D2A7203C486900ECE1ED /* birr.jpg in Resources */,
 				CE08980C20358984000F01BC /* success.jpg in Resources */,
+				E27A864B22344D8700C387E6 /* lovely.jpg in Resources */,
 				CE4CD4231FC03A0500A748CA /* jiret.ttf in Resources */,
 				CE08980620358984000F01BC /* happy.jpg in Resources */,
 				CE8298A21F700B4500BC3C0F /* LaunchScreen.storyboard in Resources */,
