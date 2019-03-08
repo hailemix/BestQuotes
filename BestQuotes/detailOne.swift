@@ -125,7 +125,7 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
     }
     
     @IBAction func share(_ sender: UIButton) {
-        
+     
         self.textView.text = ViewController.contentDetail[textIndex]
         let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [textView.text],applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = (sender)

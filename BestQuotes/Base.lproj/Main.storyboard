@@ -115,15 +115,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                                 <color key="tintColor" red="1" green="0.4131924959336859" blue="0.43415229620495965" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8D-xD-MKA">
-                                <rect key="frame" x="20" y="628" width="36" height="36"/>
-                                <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="34"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="share"/>
-                                <connections>
-                                    <action selector="share:" destination="A5c-Q6-cFp" eventType="touchUpInside" id="b04-xV-mfI"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="krj-HL-R0y">
                                 <rect key="frame" x="20" y="133" width="368" height="450"/>
                                 <gestureRecognizers/>
@@ -131,6 +122,15 @@
                                 <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="34"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8D-xD-MKA">
+                                <rect key="frame" x="20" y="628" width="26" height="36"/>
+                                <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="34"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="share"/>
+                                <connections>
+                                    <action selector="share:" destination="A5c-Q6-cFp" eventType="touchUpInside" id="b04-xV-mfI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <gestureRecognizers/>
                         <constraints>
@@ -193,6 +193,6 @@
     </scenes>
     <resources>
         <image name="home" width="36" height="36"/>
-        <image name="share" width="36" height="36"/>
+        <image name="share" width="26" height="36"/>
     </resources>
 </document>
