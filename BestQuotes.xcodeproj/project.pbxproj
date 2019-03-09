@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13F9DC130CE15B370EA5A64F /* Pods_BestQuotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323EF88AB2D47284F388975 /* Pods_BestQuotes.framework */; };
-		763614F0E1AEB0EBB9FAB809 /* Pods_BestQuotesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4981CA6D829FA87F1CA0CD07 /* Pods_BestQuotesTests.framework */; };
+		BDE204C67D822B565A05F3D4 /* Pods_BestQuotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B997F4A6F861425A45FBE3 /* Pods_BestQuotes.framework */; };
 		CE08980520358984000F01BC /* faith.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE0897FA20358984000F01BC /* faith.jpg */; };
 		CE08980620358984000F01BC /* happy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE0897FB20358984000F01BC /* happy.jpg */; };
 		CE08980720358984000F01BC /* lead.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE0897FC20358984000F01BC /* lead.jpg */; };
@@ -32,6 +31,7 @@
 		E27A862B22336F9E00C387E6 /* lovely.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E27A862A22336F9E00C387E6 /* lovely.jpg */; };
 		E27A862C22336F9E00C387E6 /* lovely.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E27A862A22336F9E00C387E6 /* lovely.jpg */; };
 		E27A86432234409500C387E6 /* mix.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E27A86422234409500C387E6 /* mix.jpg */; };
+		E7C44C0F5F58C0F680E19058 /* Pods_BestQuotesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C393E0218C0B51D653CFAD6 /* Pods_BestQuotesTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1C9CCE7320FC97E5135F3B4D /* Pods-BestQuotesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestQuotesTests.release.xcconfig"; path = "Target Support Files/Pods-BestQuotesTests/Pods-BestQuotesTests.release.xcconfig"; sourceTree = "<group>"; };
-		4981CA6D829FA87F1CA0CD07 /* Pods_BestQuotesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BestQuotesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5323EF88AB2D47284F388975 /* Pods_BestQuotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BestQuotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		91CF273D5177B2119CC4ED22 /* Pods-BestQuotesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestQuotesTests.debug.xcconfig"; path = "Target Support Files/Pods-BestQuotesTests/Pods-BestQuotesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		05FE23F6EDEF33E52BCE031D /* Pods-BestQuotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestQuotes.release.xcconfig"; path = "Target Support Files/Pods-BestQuotes/Pods-BestQuotes.release.xcconfig"; sourceTree = "<group>"; };
+		1B6949F289665334AABEE412 /* Pods-BestQuotesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestQuotesTests.debug.xcconfig"; path = "Target Support Files/Pods-BestQuotesTests/Pods-BestQuotesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		325F3B9CE594A93CDCD96B5F /* Pods-BestQuotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestQuotes.debug.xcconfig"; path = "Target Support Files/Pods-BestQuotes/Pods-BestQuotes.debug.xcconfig"; sourceTree = "<group>"; };
+		33043869FCE15581F14EA906 /* Pods-BestQuotesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestQuotesTests.release.xcconfig"; path = "Target Support Files/Pods-BestQuotesTests/Pods-BestQuotesTests.release.xcconfig"; sourceTree = "<group>"; };
+		7C393E0218C0B51D653CFAD6 /* Pods_BestQuotesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BestQuotesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80B997F4A6F861425A45FBE3 /* Pods_BestQuotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BestQuotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0897FA20358984000F01BC /* faith.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = faith.jpg; sourceTree = "<group>"; };
 		CE0897FB20358984000F01BC /* happy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = happy.jpg; sourceTree = "<group>"; };
 		CE0897FC20358984000F01BC /* lead.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lead.jpg; sourceTree = "<group>"; };
@@ -72,11 +74,9 @@
 		CE8298AE1F700B4500BC3C0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE8298B71F700E3A00BC3C0F /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE8317511FBC3BEF0014DF68 /* TransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimation.swift; sourceTree = "<group>"; };
-		CEA510E80E61E05C95AB5C33 /* Pods-BestQuotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestQuotes.release.xcconfig"; path = "Target Support Files/Pods-BestQuotes/Pods-BestQuotes.release.xcconfig"; sourceTree = "<group>"; };
 		CEF62B821F729E10001C6BF3 /* detailOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailOne.swift; sourceTree = "<group>"; };
 		E27A862A22336F9E00C387E6 /* lovely.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = lovely.jpg; path = ../../../lovely.jpg; sourceTree = "<group>"; };
 		E27A86422234409500C387E6 /* mix.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mix.jpg; path = ../../../mix.jpg; sourceTree = "<group>"; };
-		E9A671F40B133CC6F00913C6 /* Pods-BestQuotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestQuotes.debug.xcconfig"; path = "Target Support Files/Pods-BestQuotes/Pods-BestQuotes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13F9DC130CE15B370EA5A64F /* Pods_BestQuotes.framework in Frameworks */,
+				BDE204C67D822B565A05F3D4 /* Pods_BestQuotes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,22 +92,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				763614F0E1AEB0EBB9FAB809 /* Pods_BestQuotesTests.framework in Frameworks */,
+				E7C44C0F5F58C0F680E19058 /* Pods_BestQuotesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B0A770344CD3A49DACA10790 /* Pods */ = {
+		2536224205E37F95261CE622 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E9A671F40B133CC6F00913C6 /* Pods-BestQuotes.debug.xcconfig */,
-				CEA510E80E61E05C95AB5C33 /* Pods-BestQuotes.release.xcconfig */,
-				91CF273D5177B2119CC4ED22 /* Pods-BestQuotesTests.debug.xcconfig */,
-				1C9CCE7320FC97E5135F3B4D /* Pods-BestQuotesTests.release.xcconfig */,
+				325F3B9CE594A93CDCD96B5F /* Pods-BestQuotes.debug.xcconfig */,
+				05FE23F6EDEF33E52BCE031D /* Pods-BestQuotes.release.xcconfig */,
+				1B6949F289665334AABEE412 /* Pods-BestQuotesTests.debug.xcconfig */,
+				33043869FCE15581F14EA906 /* Pods-BestQuotesTests.release.xcconfig */,
 			);
+			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		4124A65BCD5907F943D78A1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80B997F4A6F861425A45FBE3 /* Pods_BestQuotes.framework */,
+				7C393E0218C0B51D653CFAD6 /* Pods_BestQuotesTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CE0897F720358446000F01BC /* Background Images */ = {
@@ -164,8 +174,8 @@
 				CE8298961F700B4400BC3C0F /* BestQuotes */,
 				CE8298AB1F700B4500BC3C0F /* BestQuotesTests */,
 				CE8298951F700B4400BC3C0F /* Products */,
-				B0A770344CD3A49DACA10790 /* Pods */,
-				E6694DDB79A08FEC3A0AC537 /* Frameworks */,
+				2536224205E37F95261CE622 /* Pods */,
+				4124A65BCD5907F943D78A1F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -201,15 +211,6 @@
 			path = BestQuotesTests;
 			sourceTree = "<group>";
 		};
-		E6694DDB79A08FEC3A0AC537 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5323EF88AB2D47284F388975 /* Pods_BestQuotes.framework */,
-				4981CA6D829FA87F1CA0CD07 /* Pods_BestQuotesTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -221,7 +222,7 @@
 				CE8298901F700B4400BC3C0F /* Sources */,
 				CE8298911F700B4400BC3C0F /* Frameworks */,
 				CE8298921F700B4400BC3C0F /* Resources */,
-				16977832A9B0F740F3356AD8 /* [CP] Embed Pods Frameworks */,
+				D13B9AD51E231E81911437BD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -330,28 +331,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		16977832A9B0F740F3356AD8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BestQuotes/Pods-BestQuotes-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BestQuotes/Pods-BestQuotes-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B9AE718517A8FD06F505F349 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -386,6 +365,32 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D13B9AD51E231E81911437BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BestQuotes/Pods-BestQuotes-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BestQuotes/Pods-BestQuotes-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -552,7 +557,7 @@
 		};
 		CE8298B21F700B4500BC3C0F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E9A671F40B133CC6F00913C6 /* Pods-BestQuotes.debug.xcconfig */;
+			baseConfigurationReference = 325F3B9CE594A93CDCD96B5F /* Pods-BestQuotes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6WP3YL298B;
@@ -567,7 +572,7 @@
 		};
 		CE8298B31F700B4500BC3C0F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CEA510E80E61E05C95AB5C33 /* Pods-BestQuotes.release.xcconfig */;
+			baseConfigurationReference = 05FE23F6EDEF33E52BCE031D /* Pods-BestQuotes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6WP3YL298B;
@@ -582,7 +587,7 @@
 		};
 		CE8298B51F700B4500BC3C0F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91CF273D5177B2119CC4ED22 /* Pods-BestQuotesTests.debug.xcconfig */;
+			baseConfigurationReference = 1B6949F289665334AABEE412 /* Pods-BestQuotesTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -599,7 +604,7 @@
 		};
 		CE8298B61F700B4500BC3C0F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C9CCE7320FC97E5135F3B4D /* Pods-BestQuotesTests.release.xcconfig */;
+			baseConfigurationReference = 33043869FCE15581F14EA906 /* Pods-BestQuotesTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
