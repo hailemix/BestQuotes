@@ -31,8 +31,7 @@
 		CEF62B831F729E10001C6BF3 /* detailOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF62B821F729E10001C6BF3 /* detailOne.swift */; };
 		E27A862B22336F9E00C387E6 /* lovely.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E27A862A22336F9E00C387E6 /* lovely.jpg */; };
 		E27A862C22336F9E00C387E6 /* lovely.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E27A862A22336F9E00C387E6 /* lovely.jpg */; };
-		E27A86372233748900C387E6 /* mix.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E27A86362233748900C387E6 /* mix.jpg */; };
-		E27A86382233748900C387E6 /* mix.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E27A86362233748900C387E6 /* mix.jpg */; };
+		E27A86432234409500C387E6 /* mix.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E27A86422234409500C387E6 /* mix.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +75,7 @@
 		CEA510E80E61E05C95AB5C33 /* Pods-BestQuotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestQuotes.release.xcconfig"; path = "Target Support Files/Pods-BestQuotes/Pods-BestQuotes.release.xcconfig"; sourceTree = "<group>"; };
 		CEF62B821F729E10001C6BF3 /* detailOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailOne.swift; sourceTree = "<group>"; };
 		E27A862A22336F9E00C387E6 /* lovely.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = lovely.jpg; path = ../../../lovely.jpg; sourceTree = "<group>"; };
-		E27A86362233748900C387E6 /* mix.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mix.jpg; path = ../../../mix.jpg; sourceTree = "<group>"; };
+		E27A86422234409500C387E6 /* mix.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mix.jpg; path = ../../../mix.jpg; sourceTree = "<group>"; };
 		E9A671F40B133CC6F00913C6 /* Pods-BestQuotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestQuotes.debug.xcconfig"; path = "Target Support Files/Pods-BestQuotes/Pods-BestQuotes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,14 +107,13 @@
 				91CF273D5177B2119CC4ED22 /* Pods-BestQuotesTests.debug.xcconfig */,
 				1C9CCE7320FC97E5135F3B4D /* Pods-BestQuotesTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		CE0897F720358446000F01BC /* Background Images */ = {
 			isa = PBXGroup;
 			children = (
-				E27A86362233748900C387E6 /* mix.jpg */,
+				E27A86422234409500C387E6 /* mix.jpg */,
 				E27A862A22336F9E00C387E6 /* lovely.jpg */,
 				CE138183203C99CA00B61B4B /* marri.jpg */,
 				CE36D2A6203C486900ECE1ED /* birr.jpg */,
@@ -306,13 +304,13 @@
 				CE36D2A7203C486900ECE1ED /* birr.jpg in Resources */,
 				E27A862B22336F9E00C387E6 /* lovely.jpg in Resources */,
 				CE08980C20358984000F01BC /* success.jpg in Resources */,
-				E27A86372233748900C387E6 /* mix.jpg in Resources */,
 				CE4CD4231FC03A0500A748CA /* jiret.ttf in Resources */,
 				CE08980620358984000F01BC /* happy.jpg in Resources */,
 				CE8298A21F700B4500BC3C0F /* LaunchScreen.storyboard in Resources */,
 				CE08980720358984000F01BC /* lead.jpg in Resources */,
 				CE82989F1F700B4500BC3C0F /* Assets.xcassets in Resources */,
 				CE138184203C99CA00B61B4B /* marri.jpg in Resources */,
+				E27A86432234409500C387E6 /* mix.jpg in Resources */,
 				CE36D2A5203C445400ECE1ED /* thunder.jpg in Resources */,
 				CE08980F203622EB000F01BC /* myArray.json in Resources */,
 				CE08980520358984000F01BC /* faith.jpg in Resources */,
@@ -325,7 +323,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E27A86382233748900C387E6 /* mix.jpg in Resources */,
 				E27A862C22336F9E00C387E6 /* lovely.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
