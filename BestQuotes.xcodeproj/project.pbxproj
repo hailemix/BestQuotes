@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C7D901B5C363F01DD6B278AD /* Pods_BestQuotesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADFE3D7308F33C7F6C361F38 /* Pods_BestQuotesTests.framework */; };
 		CE08980520358984000F01BC /* faith.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE0897FA20358984000F01BC /* faith.jpg */; };
 		CE08980620358984000F01BC /* happy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE0897FB20358984000F01BC /* happy.jpg */; };
 		CE08980720358984000F01BC /* lead.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE0897FC20358984000F01BC /* lead.jpg */; };
@@ -32,7 +31,6 @@
 		E27A862C22336F9E00C387E6 /* lovely.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E27A862A22336F9E00C387E6 /* lovely.jpg */; };
 		E27A86372233748900C387E6 /* mix.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E27A86362233748900C387E6 /* mix.jpg */; };
 		E27A86382233748900C387E6 /* mix.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E27A86362233748900C387E6 /* mix.jpg */; };
-		F0859B7C36AD6809E9FC9B59 /* Pods_BestQuotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47174469C070297099D99CA3 /* Pods_BestQuotes.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +83,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0859B7C36AD6809E9FC9B59 /* Pods_BestQuotes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +90,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7D901B5C363F01DD6B278AD /* Pods_BestQuotesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,7 +613,6 @@
 		};
 		CE8298B31F700B4500BC3C0F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7260190D3169D79A8986F650 /* Pods-BestQuotes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6WP3YL298B;
@@ -632,7 +627,7 @@
 		};
 		CE8298B51F700B4500BC3C0F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB07B61CE60E71833577EF6B /* Pods-BestQuotesTests.debug.xcconfig */;
+			baseConfigurationReference = 33BAFD029CF60C04E2C60939 /* Pods-BestQuotes.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -649,7 +644,6 @@
 		};
 		CE8298B61F700B4500BC3C0F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A8214FF7B93BE34A59881E1F /* Pods-BestQuotesTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
