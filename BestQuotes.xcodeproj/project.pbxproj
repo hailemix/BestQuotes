@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13F9DC130CE15B370EA5A64F /* Pods_BestQuotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323EF88AB2D47284F388975 /* Pods_BestQuotes.framework */; };
+		763614F0E1AEB0EBB9FAB809 /* Pods_BestQuotesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4981CA6D829FA87F1CA0CD07 /* Pods_BestQuotesTests.framework */; };
 		CE08980520358984000F01BC /* faith.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE0897FA20358984000F01BC /* faith.jpg */; };
 		CE08980620358984000F01BC /* happy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE0897FB20358984000F01BC /* happy.jpg */; };
 		CE08980720358984000F01BC /* lead.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE0897FC20358984000F01BC /* lead.jpg */; };
@@ -44,12 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		33BAFD029CF60C04E2C60939 /* Pods-BestQuotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestQuotes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BestQuotes/Pods-BestQuotes.debug.xcconfig"; sourceTree = "<group>"; };
-		47174469C070297099D99CA3 /* Pods_BestQuotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BestQuotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7260190D3169D79A8986F650 /* Pods-BestQuotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestQuotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-BestQuotes/Pods-BestQuotes.release.xcconfig"; sourceTree = "<group>"; };
-		A8214FF7B93BE34A59881E1F /* Pods-BestQuotesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestQuotesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BestQuotesTests/Pods-BestQuotesTests.release.xcconfig"; sourceTree = "<group>"; };
-		AB07B61CE60E71833577EF6B /* Pods-BestQuotesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestQuotesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BestQuotesTests/Pods-BestQuotesTests.debug.xcconfig"; sourceTree = "<group>"; };
-		ADFE3D7308F33C7F6C361F38 /* Pods_BestQuotesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BestQuotesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C9CCE7320FC97E5135F3B4D /* Pods-BestQuotesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestQuotesTests.release.xcconfig"; path = "Target Support Files/Pods-BestQuotesTests/Pods-BestQuotesTests.release.xcconfig"; sourceTree = "<group>"; };
+		4981CA6D829FA87F1CA0CD07 /* Pods_BestQuotesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BestQuotesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5323EF88AB2D47284F388975 /* Pods_BestQuotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BestQuotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91CF273D5177B2119CC4ED22 /* Pods-BestQuotesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestQuotesTests.debug.xcconfig"; path = "Target Support Files/Pods-BestQuotesTests/Pods-BestQuotesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CE0897FA20358984000F01BC /* faith.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = faith.jpg; sourceTree = "<group>"; };
 		CE0897FB20358984000F01BC /* happy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = happy.jpg; sourceTree = "<group>"; };
 		CE0897FC20358984000F01BC /* lead.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lead.jpg; sourceTree = "<group>"; };
@@ -73,9 +73,11 @@
 		CE8298AE1F700B4500BC3C0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE8298B71F700E3A00BC3C0F /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE8317511FBC3BEF0014DF68 /* TransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimation.swift; sourceTree = "<group>"; };
+		CEA510E80E61E05C95AB5C33 /* Pods-BestQuotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestQuotes.release.xcconfig"; path = "Target Support Files/Pods-BestQuotes/Pods-BestQuotes.release.xcconfig"; sourceTree = "<group>"; };
 		CEF62B821F729E10001C6BF3 /* detailOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailOne.swift; sourceTree = "<group>"; };
 		E27A862A22336F9E00C387E6 /* lovely.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = lovely.jpg; path = ../../../lovely.jpg; sourceTree = "<group>"; };
 		E27A86362233748900C387E6 /* mix.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mix.jpg; path = ../../../mix.jpg; sourceTree = "<group>"; };
+		E9A671F40B133CC6F00913C6 /* Pods-BestQuotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestQuotes.debug.xcconfig"; path = "Target Support Files/Pods-BestQuotes/Pods-BestQuotes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13F9DC130CE15B370EA5A64F /* Pods_BestQuotes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,19 +93,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				763614F0E1AEB0EBB9FAB809 /* Pods_BestQuotesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		58FDEDB3F4C1C2BF54419829 /* Frameworks */ = {
+		B0A770344CD3A49DACA10790 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				47174469C070297099D99CA3 /* Pods_BestQuotes.framework */,
-				ADFE3D7308F33C7F6C361F38 /* Pods_BestQuotesTests.framework */,
+				E9A671F40B133CC6F00913C6 /* Pods-BestQuotes.debug.xcconfig */,
+				CEA510E80E61E05C95AB5C33 /* Pods-BestQuotes.release.xcconfig */,
+				91CF273D5177B2119CC4ED22 /* Pods-BestQuotesTests.debug.xcconfig */,
+				1C9CCE7320FC97E5135F3B4D /* Pods-BestQuotesTests.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		CE0897F720358446000F01BC /* Background Images */ = {
@@ -159,8 +166,8 @@
 				CE8298961F700B4400BC3C0F /* BestQuotes */,
 				CE8298AB1F700B4500BC3C0F /* BestQuotesTests */,
 				CE8298951F700B4400BC3C0F /* Products */,
-				DC5DB9DF74329C4E0737ADEF /* Pods */,
-				58FDEDB3F4C1C2BF54419829 /* Frameworks */,
+				B0A770344CD3A49DACA10790 /* Pods */,
+				E6694DDB79A08FEC3A0AC537 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -196,15 +203,13 @@
 			path = BestQuotesTests;
 			sourceTree = "<group>";
 		};
-		DC5DB9DF74329C4E0737ADEF /* Pods */ = {
+		E6694DDB79A08FEC3A0AC537 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				33BAFD029CF60C04E2C60939 /* Pods-BestQuotes.debug.xcconfig */,
-				7260190D3169D79A8986F650 /* Pods-BestQuotes.release.xcconfig */,
-				AB07B61CE60E71833577EF6B /* Pods-BestQuotesTests.debug.xcconfig */,
-				A8214FF7B93BE34A59881E1F /* Pods-BestQuotesTests.release.xcconfig */,
+				5323EF88AB2D47284F388975 /* Pods_BestQuotes.framework */,
+				4981CA6D829FA87F1CA0CD07 /* Pods_BestQuotesTests.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,7 +224,6 @@
 				CE8298911F700B4400BC3C0F /* Frameworks */,
 				CE8298921F700B4400BC3C0F /* Resources */,
 				16977832A9B0F740F3356AD8 /* [CP] Embed Pods Frameworks */,
-				6A4FF9000BCE9A90AE4F90B8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,8 +242,6 @@
 				CE8298A41F700B4500BC3C0F /* Sources */,
 				CE8298A51F700B4500BC3C0F /* Frameworks */,
 				CE8298A61F700B4500BC3C0F /* Resources */,
-				702B1E15A4409512C68D4A88 /* [CP] Embed Pods Frameworks */,
-				45CE872568A53AED05DE5576 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -337,65 +339,20 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BestQuotes/Pods-BestQuotes-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-BestQuotes/Pods-BestQuotes-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BestQuotes/Pods-BestQuotes-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		45CE872568A53AED05DE5576 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BestQuotesTests/Pods-BestQuotesTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6A4FF9000BCE9A90AE4F90B8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BestQuotes/Pods-BestQuotes-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		702B1E15A4409512C68D4A88 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BestQuotesTests/Pods-BestQuotesTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BestQuotes/Pods-BestQuotes-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B9AE718517A8FD06F505F349 /* [CP] Check Pods Manifest.lock */ = {
@@ -598,7 +555,7 @@
 		};
 		CE8298B21F700B4500BC3C0F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33BAFD029CF60C04E2C60939 /* Pods-BestQuotes.debug.xcconfig */;
+			baseConfigurationReference = E9A671F40B133CC6F00913C6 /* Pods-BestQuotes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6WP3YL298B;
@@ -613,6 +570,7 @@
 		};
 		CE8298B31F700B4500BC3C0F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEA510E80E61E05C95AB5C33 /* Pods-BestQuotes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6WP3YL298B;
@@ -627,7 +585,7 @@
 		};
 		CE8298B51F700B4500BC3C0F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33BAFD029CF60C04E2C60939 /* Pods-BestQuotes.debug.xcconfig */;
+			baseConfigurationReference = 91CF273D5177B2119CC4ED22 /* Pods-BestQuotesTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -644,6 +602,7 @@
 		};
 		CE8298B61F700B4500BC3C0F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C9CCE7320FC97E5135F3B4D /* Pods-BestQuotesTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
