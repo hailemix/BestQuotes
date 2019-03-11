@@ -63,7 +63,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                             TransitionAnimation.viewSlideInFromRight(toLeft: cell)
                         }
         } , completion: nil)
-        cell.myImage.image = UIImage(named: gridImages[indexPath.row])
+        cell.myImage.image = UIImage(named:gridImages[indexPath.row])
         return cell
     }
         
@@ -104,13 +104,13 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         case 1:
             imageIndex = 1
             contentString = "contentTwo"
-            ViewController.maxTextCount = 71
+            ViewController.maxTextCount = 70
             break
             
         case 2:
             imageIndex = 2
             contentString = "contentThree"
-            ViewController.maxTextCount = 68
+            ViewController.maxTextCount = 67
             break
             
         case 3:
@@ -122,36 +122,36 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         case 4:
             imageIndex = 4
             contentString = "contentFive"
-            ViewController.maxTextCount = 64
+            ViewController.maxTextCount = 63
             break
             
         case 5:
             imageIndex = 5
             contentString = "contentSix"
-            ViewController.maxTextCount = 68
+            ViewController.maxTextCount = 66
             break
             
         case 6:
             imageIndex = 6
             contentString = "contentSeven"
-            ViewController.maxTextCount = 68
+            ViewController.maxTextCount = 67
             break
             
         case 7:
             imageIndex = 7
             contentString = "contentEight"
-            ViewController.maxTextCount = 74
+            ViewController.maxTextCount = 73
             break
         case 8:
             imageIndex = 8
             contentString = "contentNine"
-            ViewController.maxTextCount = 83
+            ViewController.maxTextCount = 82
             break
             
         case 9:
             imageIndex = 9
             contentString = "contentTen"
-            ViewController.maxTextCount = 70
+            ViewController.maxTextCount = 69
             break
             
         default:
@@ -183,6 +183,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                   if let contentDictionary = myArray as? [String: Any]{
                     
                      contentArray = (contentDictionary[contentString] as? [String])!
+                
                     
                 }
             }
