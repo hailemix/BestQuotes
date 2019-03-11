@@ -147,12 +147,12 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
         view.addConstraints([
             
             NSLayoutConstraint(item:bannerView,
-                               attribute: .top,
+                               attribute: .bottom,
                                relatedBy: .equal,
-                               toItem: topLayoutGuide,
-                               attribute: .top,
+                               toItem: bottomLayoutGuide,
+                               attribute: .bottom,
                                multiplier: 1,
-                               constant: 120),
+                               constant: -65),
             
             NSLayoutConstraint(item:bannerView,
                                attribute: .centerX,
