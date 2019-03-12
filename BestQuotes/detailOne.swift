@@ -18,15 +18,22 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
     @IBOutlet var textView: UITextView!
     @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var toolBar: UIToolbar!
-    
+    var bannerView: GADBannerView!
     var screenSize : CGRect!
     var textIndex = 0
-    var bannerView : GADBannerView!
     var interstitial: GADInterstitial!
     static var interstitialCounter = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+         bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+         addBannerViewToView(bannerView)
+         bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+         bannerView.rootViewController = self
+         bannerView.load(GADRequest())
+        
+  
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -51,19 +58,37 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
         let imagePath = Bundle.main.path(forResource:ViewController.images, ofType: "jpg")
         imageView.image = UIImage(contentsOfFile: imagePath!)
         
-        bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+        
         
         /*
          This is the real Banner Ad ID
         bannerView.adUnitID = "ca-app-pub-9156727777369518/3629976607"
  
         */
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
-        addBannerViewToView(bannerView)
+        
         interstitial = createAndLoadInterstitial()
         
+    }
+    
+    func addBannerViewToView(_ bannerView: GADBannerView){
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        view.addConstraints([
+            NSLayoutConstraint(item: bannerView,
+                               attribute: .bottom,
+                               relatedBy: .equal,
+                               toItem: bottomLayoutGuide,
+                               attribute: .top,
+                               multiplier: 1,
+                               constant: 0),
+                               NSLayoutConstraint( item: bannerView,
+                                                   attribute: .centerX,
+                                                   relatedBy : .equal,
+                                                   toItem: view,
+                                                   attribute: .centerX,
+                                                   multiplier: 1,
+                                                   constant: 0)
+            ])
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
@@ -138,30 +163,6 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
         
         let nextText : String = self.textView.text
         UITextView.transition(with: self.textView, duration: 0.4, options: .transitionFlipFromBottom, animations: { self.textView.text = nextText }, completion: nil)
-    }
-    
-    func addBannerViewToView(_ bannerView : GADBannerView){
-        
-        bannerView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(bannerView)
-        view.addConstraints([
-            
-            NSLayoutConstraint(item:bannerView,
-                               attribute: .bottom,
-                               relatedBy: .equal,
-                               toItem: bottomLayoutGuide,
-                               attribute: .bottom,
-                               multiplier: 1,
-                               constant: -65),
-            
-            NSLayoutConstraint(item:bannerView,
-                               attribute: .centerX,
-                               relatedBy: .equal,
-                               toItem: view,
-                               attribute: .centerX,
-                               multiplier: 1,
-                               constant: 0) ])
-        
     }
     
     func createAndLoadInterstitial() -> GADInterstitial {

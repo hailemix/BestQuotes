@@ -19,8 +19,8 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" id="BYZ-38-t0r" customClass="ViewController" customModule="BestQuotes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="TSj-q3-W9k"/>
+                        <viewControllerLayoutGuide type="bottom" id="EmS-xu-ffK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -63,7 +63,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CsG-xr-E36" secondAttribute="bottom" id="6kZ-t5-m4f"/>
+                            <constraint firstItem="EmS-xu-ffK" firstAttribute="top" secondItem="CsG-xr-E36" secondAttribute="bottom" id="6kZ-t5-m4f"/>
                             <constraint firstAttribute="trailing" secondItem="CsG-xr-E36" secondAttribute="trailing" id="E71-SL-exg"/>
                             <constraint firstItem="CsG-xr-E36" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mAe-up-f9J"/>
                             <constraint firstItem="CsG-xr-E36" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="q2C-TY-6Cl"/>
@@ -100,8 +100,8 @@
             <objects>
                 <viewController restorationIdentifier="detailOne" storyboardIdentifier="detailOne" title="detailOne" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" modalPresentationStyle="pageSheet" id="A5c-Q6-cFp" customClass="detailOne" customModule="BestQuotes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="OMe-4Q-N12"/>
-                        <viewControllerLayoutGuide type="bottom" id="c9v-iY-RdW"/>
+                        <viewControllerLayoutGuide type="top" id="bGc-Fu-DiF"/>
+                        <viewControllerLayoutGuide type="bottom" id="vPr-Wn-ymE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleAspectFill" id="ctM-1a-f9I">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
@@ -112,18 +112,22 @@
                                 <gestureRecognizers/>
                             </scrollView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v2k-sX-ll3">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="-66" width="414" height="738"/>
                                 <color key="tintColor" red="1" green="0.4131924959336859" blue="0.43415229620495965" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="krj-HL-R0y">
-                                <rect key="frame" x="20" y="133" width="368" height="450"/>
+                                <rect key="frame" x="20" y="155" width="374" height="367"/>
                                 <gestureRecognizers/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="34"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8D-xD-MKA">
-                                <rect key="frame" x="20" y="628" width="26" height="36"/>
+                                <rect key="frame" x="20" y="565" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9fi-Kg-HPE"/>
+                                    <constraint firstAttribute="width" constant="40" id="wsP-pp-6ey"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="34"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="share"/>
@@ -134,20 +138,20 @@
                         </subviews>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="o8D-xD-MKA" firstAttribute="top" secondItem="krj-HL-R0y" secondAttribute="bottom" constant="45" id="3LX-fq-N7x"/>
-                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="trailing" secondItem="v2k-sX-ll3" secondAttribute="trailing" id="4Ld-i4-jiv"/>
-                            <constraint firstItem="krj-HL-R0y" firstAttribute="top" secondItem="OMe-4Q-N12" secondAttribute="bottom" constant="133" id="4PZ-Ef-nzW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="krj-HL-R0y" secondAttribute="trailing" constant="6" id="56E-Ps-5go"/>
-                            <constraint firstItem="v2k-sX-ll3" firstAttribute="leading" secondItem="SkN-Gs-NSp" secondAttribute="leading" id="D5i-hv-Cne"/>
-                            <constraint firstItem="krj-HL-R0y" firstAttribute="leading" secondItem="o8D-xD-MKA" secondAttribute="leading" id="DWU-3O-qhP"/>
-                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="bottom" secondItem="c9v-iY-RdW" secondAttribute="top" id="Dun-gD-Vkx"/>
-                            <constraint firstItem="v2k-sX-ll3" firstAttribute="bottom" secondItem="c9v-iY-RdW" secondAttribute="top" id="awR-ga-KVM"/>
-                            <constraint firstItem="krj-HL-R0y" firstAttribute="leading" secondItem="ctM-1a-f9I" secondAttribute="leadingMargin" id="cBh-ae-Lgr"/>
-                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="top" secondItem="v2k-sX-ll3" secondAttribute="top" id="cVF-DS-xOr"/>
-                            <constraint firstItem="c9v-iY-RdW" firstAttribute="top" secondItem="o8D-xD-MKA" secondAttribute="bottom" constant="8" symbolic="YES" id="jMQ-oa-4gR"/>
-                            <constraint firstItem="v2k-sX-ll3" firstAttribute="top" secondItem="ctM-1a-f9I" secondAttribute="top" id="qEf-FH-ySQ"/>
-                            <constraint firstAttribute="trailing" secondItem="v2k-sX-ll3" secondAttribute="trailing" id="qzw-Nc-i43"/>
-                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="leading" secondItem="ctM-1a-f9I" secondAttribute="leading" id="zR7-7W-b9h"/>
+                            <constraint firstItem="krj-HL-R0y" firstAttribute="leading" secondItem="ctM-1a-f9I" secondAttribute="leadingMargin" id="0LV-5z-YrT"/>
+                            <constraint firstItem="v2k-sX-ll3" firstAttribute="top" secondItem="ctM-1a-f9I" secondAttribute="topMargin" constant="-66" id="0im-GO-TFa"/>
+                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="top" secondItem="bGc-Fu-DiF" secondAttribute="bottom" id="0ls-pf-Btt"/>
+                            <constraint firstItem="v2k-sX-ll3" firstAttribute="trailing" secondItem="SkN-Gs-NSp" secondAttribute="trailing" id="3A6-02-hFg"/>
+                            <constraint firstItem="krj-HL-R0y" firstAttribute="top" secondItem="bGc-Fu-DiF" secondAttribute="bottom" constant="155" id="53I-Xb-7Zp"/>
+                            <constraint firstItem="krj-HL-R0y" firstAttribute="leading" secondItem="o8D-xD-MKA" secondAttribute="leading" id="6vQ-LK-tK5"/>
+                            <constraint firstItem="vPr-Wn-ymE" firstAttribute="top" secondItem="o8D-xD-MKA" secondAttribute="bottom" constant="67" id="819-RR-T9N"/>
+                            <constraint firstItem="v2k-sX-ll3" firstAttribute="leading" secondItem="SkN-Gs-NSp" secondAttribute="leading" id="A3E-C5-lhD"/>
+                            <constraint firstAttribute="trailing" secondItem="SkN-Gs-NSp" secondAttribute="trailing" id="GZr-JN-zNj"/>
+                            <constraint firstItem="o8D-xD-MKA" firstAttribute="top" secondItem="krj-HL-R0y" secondAttribute="bottom" constant="43" id="hAy-sT-CXi"/>
+                            <constraint firstItem="v2k-sX-ll3" firstAttribute="bottom" secondItem="vPr-Wn-ymE" secondAttribute="top" id="kwm-lF-7G0"/>
+                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="leading" secondItem="ctM-1a-f9I" secondAttribute="leading" id="pIT-Tc-O18"/>
+                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="bottom" secondItem="vPr-Wn-ymE" secondAttribute="top" id="tec-VK-B6n"/>
+                            <constraint firstItem="SkN-Gs-NSp" firstAttribute="centerX" secondItem="krj-HL-R0y" secondAttribute="centerX" id="z7r-hF-JSj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0yF-Yw-bBQ">
