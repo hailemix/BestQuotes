@@ -33,8 +33,6 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
          bannerView.rootViewController = self
          bannerView.load(GADRequest())
         
-  
-        
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
