@@ -56,8 +56,6 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
         let imagePath = Bundle.main.path(forResource:ViewController.images, ofType: "jpg")
         imageView.image = UIImage(contentsOfFile: imagePath!)
         
-        
-        
         /*
          This is the real Banner Ad ID
         bannerView.adUnitID = "ca-app-pub-9156727777369518/3629976607"
@@ -79,13 +77,13 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
                                attribute: .top,
                                multiplier: 1,
                                constant: 0),
-                               NSLayoutConstraint( item: bannerView,
-                                                   attribute: .centerX,
-                                                   relatedBy : .equal,
-                                                   toItem: view,
-                                                   attribute: .centerX,
-                                                   multiplier: 1,
-                                                   constant: 0)
+           NSLayoutConstraint(item: bannerView,
+                              attribute: .centerX,
+                              relatedBy : .equal,
+                              toItem: view,
+                              attribute: .centerX,
+                              multiplier: 1,
+                              constant: 0)
             ])
     }
     
@@ -100,9 +98,7 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
             if(imageView != nil) {
                 
                 if(textIndex % 8 == 0 && textIndex >= 8) {
-                    
                     interstitialForSwipeGesture()
-                    
                 }
                 
                 switch swipeGesture.direction {
@@ -112,13 +108,9 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
                     textIndex = textIndex - 1
                     textView.textColor = UIColor.yellow
                     if(textIndex < 0) {
-                        
                         textIndex = 0
-                        
                     } else {
-                        
                         animateNextText()
-                        
                     }
                     
                 case UISwipeGestureRecognizer.Direction.left:
@@ -127,24 +119,17 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
                     textView.textColor = UIColor.white
                     
                     if(textIndex  > ViewController.maxTextCount) {
-                        
                         textIndex = ViewController.maxTextCount
-                        
                     } else {
-                        
                         animateNextText()
                     }
                     
                 default:
                     break
                 }
-                
                 textView.text = ViewController.contentDetail[textIndex]
-                
             }
-            
         }
-        
     }
     
     @IBAction func share(_ sender: UIButton) {
