@@ -29,7 +29,7 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
         
          bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
          addBannerViewToView(bannerView)
-         bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+         bannerView.adUnitID = "ca-app-pub-9156727777369518/3629976607"
          bannerView.rootViewController = self
          bannerView.load(GADRequest())
         
@@ -55,12 +55,6 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
         
         let imagePath = Bundle.main.path(forResource:ViewController.images, ofType: "jpg")
         imageView.image = UIImage(contentsOfFile: imagePath!)
-        
-        /*
-         This is the real Banner Ad ID
-        bannerView.adUnitID = "ca-app-pub-9156727777369518/3629976607"
- 
-        */
         
         interstitial = createAndLoadInterstitial()
         
@@ -150,13 +144,7 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
     
     func createAndLoadInterstitial() -> GADInterstitial {
         
-        /*
-         This is real test ad
-         interstitial = GADInterstitial(adUnitID: "ca-app-pub-9156727777369518/2648067429")
-         *
-         *
-         */
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-9156727777369518/2648067429")
         interstitial.load(GADRequest())
         interstitial.delegate = self
         return interstitial
