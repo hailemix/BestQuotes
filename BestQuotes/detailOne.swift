@@ -57,7 +57,7 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
         imageView.image = UIImage(contentsOfFile: imagePath!)
         
         interstitial = createAndLoadInterstitial()
-        
+
     }
     
     func addBannerViewToView(_ bannerView: GADBannerView){
@@ -79,7 +79,7 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
                               multiplier: 1,
                               constant: 0)
             ])
-    }
+            }
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .default
@@ -133,8 +133,11 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
         activityViewController.popoverPresentationController?.sourceView = (sender)
         activityViewController.excludedActivityTypes = [UIActivity.ActivityType.assignToContact,UIActivity.ActivityType.saveToCameraRoll,UIActivity.ActivityType.copyToPasteboard]
         self.present(activityViewController,animated:true,completion:nil)
+
+    
         
     }
+    
     
     func animateNextText()   {
         
