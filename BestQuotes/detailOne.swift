@@ -53,7 +53,7 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
         swipeLeft.direction = .left
         self.imageView.addGestureRecognizer(swipeLeft)
         
-        let imagePath = Bundle.main.path(forResource:ViewController.images, ofType: "jpg")
+        let imagePath = Bundle.main.path(forResource:ViewController.images, ofType: "png")
         imageView.image = UIImage(contentsOfFile: imagePath!)
         
         interstitial = createAndLoadInterstitial()
