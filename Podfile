@@ -7,6 +7,8 @@ target 'BestQuotes' do
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
   pod 'Firebase/AdMob'
+  pod 'Fabric'
+  pod 'Crashlytics'
   
   # Pods for BestQuotes
   
