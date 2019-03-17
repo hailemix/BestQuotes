@@ -6,7 +6,7 @@ target 'BestQuotes' do
   use_frameworks!
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
-  pod 'Google-Mobile-Ads-SDK', '~> 7.42.0'
+  pod 'Google-Mobile-Ads-SDK'
   
   # Pods for BestQuotes
   
@@ -16,4 +16,5 @@ target 'BestQuotes' do
   end
   
 end
+
 
