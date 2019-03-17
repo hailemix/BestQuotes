@@ -9,7 +9,8 @@
 import UIKit
 import UserNotifications
 import Firebase
-
+import Fabric
+import Crashlytics
 
 
 @UIApplicationMain
@@ -42,6 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
         Messaging.messaging().delegate = self
         let token = Messaging.messaging().fcmToken
         print("FCM token: \(token ?? "")")
+        Fabric.with([Crashlytics.self])
         
            return true
     }
