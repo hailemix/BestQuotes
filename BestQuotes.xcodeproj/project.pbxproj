@@ -30,6 +30,7 @@
 		E25F7C6D223D70B0008FBAEB /* success.png in Resources */ = {isa = PBXBuildFile; fileRef = E25F7C6B223D70B0008FBAEB /* success.png */; };
 		E25F7C6E223D70B0008FBAEB /* thunder.png in Resources */ = {isa = PBXBuildFile; fileRef = E25F7C6C223D70B0008FBAEB /* thunder.png */; };
 		E29D7784223E49C300031EB7 /* Pods_BestQuotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B997F4A6F861425A45FBE3 /* Pods_BestQuotes.framework */; };
+		E29D7789223E59F400031EB7 /* Pods_BestQuotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29D7788223E59F400031EB7 /* Pods_BestQuotes.framework */; };
 		E7C44C0F5F58C0F680E19058 /* Pods_BestQuotesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C393E0218C0B51D653CFAD6 /* Pods_BestQuotesTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		E25F7C69223D707C008FBAEB /* adv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adv.png; sourceTree = "<group>"; };
 		E25F7C6B223D70B0008FBAEB /* success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = success.png; sourceTree = "<group>"; };
 		E25F7C6C223D70B0008FBAEB /* thunder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thunder.png; sourceTree = "<group>"; };
+		E29D7788223E59F400031EB7 /* Pods_BestQuotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_BestQuotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E29D7789223E59F400031EB7 /* Pods_BestQuotes.framework in Frameworks */,
 				E7C44C0F5F58C0F680E19058 /* Pods_BestQuotesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +115,7 @@
 		4124A65BCD5907F943D78A1F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E29D7788223E59F400031EB7 /* Pods_BestQuotes.framework */,
 				80B997F4A6F861425A45FBE3 /* Pods_BestQuotes.framework */,
 				7C393E0218C0B51D653CFAD6 /* Pods_BestQuotesTests.framework */,
 			);

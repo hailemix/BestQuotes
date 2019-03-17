@@ -7,8 +7,6 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 /// Provides media content information. Interact with instances of this class on the main queue
 /// only.
 @interface GADMediaContent : NSObject
@@ -17,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// media content aspect ratio is unknown.
 @property(nonatomic, readonly) CGFloat aspectRatio;
 
-@end
+/// The main image to be displayed when the media content doesn't contain video.
+@property(nonatomic, nullable) UIImage *mainImage;
 
-NS_ASSUME_NONNULL_END
+@end

@@ -421,10 +421,6 @@ Copyright 2019 Google
    limitations under the License.
 
 
-## FirebaseInstanceID
-
-Copyright 2019 Google
-
 ## FirebaseMessaging
 
 

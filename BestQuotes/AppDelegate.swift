@@ -21,7 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
      
         FirebaseApp.configure()
-        GADMobileAds.configure(withApplicationID: "ca-app-pub-9156727777369518~9788190845")
+          GADMobileAds.configure(withApplicationID: "ca-app-pub-9156727777369518~9788190845")
+         //GADMobileAds.sharedInstance(startWithCompletionHandler: "ca-app-pub-9156727777369518~9788190845")
         application.registerForRemoteNotifications()
     
         if #available(iOS 10.0, *) {
