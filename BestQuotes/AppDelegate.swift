@@ -7,10 +7,8 @@
 //
 
 import UIKit
-import FirebaseCore
-import FirebaseMessaging
 import UserNotifications
-import GoogleMobileAds
+import Firebase
 
 
 @UIApplicationMain
@@ -22,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
      
         FirebaseApp.configure()
           GADMobileAds.configure(withApplicationID: "ca-app-pub-9156727777369518~9788190845")
-         //GADMobileAds.sharedInstance(startWithCompletionHandler: "ca-app-pub-9156727777369518~9788190845")
         application.registerForRemoteNotifications()
     
         if #available(iOS 10.0, *) {
