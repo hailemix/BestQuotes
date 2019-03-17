@@ -10,7 +10,6 @@
 		245719F97D21E69DA564CB69 /* Pods_BestQuotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B6818E0AFBD6B5A259A636 /* Pods_BestQuotes.framework */; };
 		292A814DEBC72B0AFB7F5CB1 /* Pods_BestQuotesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1146B546D7014870832D6326 /* Pods_BestQuotesTests.framework */; };
 		CE08980F203622EB000F01BC /* myArray.json in Resources */ = {isa = PBXBuildFile; fileRef = CE08980E203622EB000F01BC /* myArray.json */; };
-		CE138186203D953700B61B4B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE138185203D953700B61B4B /* GoogleService-Info.plist */; };
 		CE4CD4231FC03A0500A748CA /* jiret.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE4CD4211FC02DCA00A748CA /* jiret.ttf */; };
 		CE8298981F700B4500BC3C0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8298971F700B4500BC3C0F /* AppDelegate.swift */; };
 		CE82989A1F700B4500BC3C0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8298991F700B4500BC3C0F /* ViewController.swift */; };
@@ -21,6 +20,7 @@
 		CE8298B81F700E3A00BC3C0F /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8298B71F700E3A00BC3C0F /* MyCollectionViewCell.swift */; };
 		CE8317521FBC3BF00014DF68 /* TransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8317511FBC3BEF0014DF68 /* TransitionAnimation.swift */; };
 		CEF62B831F729E10001C6BF3 /* detailOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF62B821F729E10001C6BF3 /* detailOne.swift */; };
+		E254ACF9223E9D65003375F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E254ACF8223E9D65003375F9 /* GoogleService-Info.plist */; };
 		E25F7C5E223D705E008FBAEB /* faith.png in Resources */ = {isa = PBXBuildFile; fileRef = E25F7C5B223D705D008FBAEB /* faith.png */; };
 		E25F7C5F223D705E008FBAEB /* happy.png in Resources */ = {isa = PBXBuildFile; fileRef = E25F7C5C223D705E008FBAEB /* happy.png */; };
 		E25F7C60223D705E008FBAEB /* birr.png in Resources */ = {isa = PBXBuildFile; fileRef = E25F7C5D223D705E008FBAEB /* birr.png */; };
@@ -51,7 +51,6 @@
 		A01CAEB471A5BDE249E75521 /* Pods-BestQuotesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestQuotesTests.debug.xcconfig"; path = "Target Support Files/Pods-BestQuotesTests/Pods-BestQuotesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C07446C5001AFF8BE679C920 /* Pods-BestQuotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestQuotes.debug.xcconfig"; path = "Target Support Files/Pods-BestQuotes/Pods-BestQuotes.debug.xcconfig"; sourceTree = "<group>"; };
 		CE08980E203622EB000F01BC /* myArray.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = myArray.json; path = BestQuotes/myArray.json; sourceTree = "<group>"; };
-		CE138185203D953700B61B4B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE4CD4211FC02DCA00A748CA /* jiret.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = jiret.ttf; sourceTree = "<group>"; };
 		CE8298941F700B4400BC3C0F /* BestQuotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestQuotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8298971F700B4500BC3C0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +65,7 @@
 		CE8298B71F700E3A00BC3C0F /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE8317511FBC3BEF0014DF68 /* TransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimation.swift; sourceTree = "<group>"; };
 		CEF62B821F729E10001C6BF3 /* detailOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailOne.swift; sourceTree = "<group>"; };
+		E254ACF8223E9D65003375F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E25F7C5B223D705D008FBAEB /* faith.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = faith.png; sourceTree = "<group>"; };
 		E25F7C5C223D705E008FBAEB /* happy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = happy.png; sourceTree = "<group>"; };
 		E25F7C5D223D705E008FBAEB /* birr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = birr.png; sourceTree = "<group>"; };
@@ -106,7 +106,6 @@
 				A01CAEB471A5BDE249E75521 /* Pods-BestQuotesTests.debug.xcconfig */,
 				7E784963569C064F20260425 /* Pods-BestQuotesTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -195,7 +194,7 @@
 				CE3C83AB1FE7ADB50078B327 /* All Swift Codes */,
 				CE82989E1F700B4500BC3C0F /* Assets.xcassets */,
 				CE8298A31F700B4500BC3C0F /* Info.plist */,
-				CE138185203D953700B61B4B /* GoogleService-Info.plist */,
+				E254ACF8223E9D65003375F9 /* GoogleService-Info.plist */,
 				CE4CD4211FC02DCA00A748CA /* jiret.ttf */,
 			);
 			path = BestQuotes;
@@ -309,13 +308,13 @@
 				E25F7C66223D7067008FBAEB /* mix.png in Resources */,
 				E25F7C60223D705E008FBAEB /* birr.png in Resources */,
 				E25F7C68223D7067008FBAEB /* marri.png in Resources */,
+				E254ACF9223E9D65003375F9 /* GoogleService-Info.plist in Resources */,
 				CE08980F203622EB000F01BC /* myArray.json in Resources */,
 				E25F7C65223D7067008FBAEB /* lovely.png in Resources */,
 				E25F7C5E223D705E008FBAEB /* faith.png in Resources */,
 				E25F7C6A223D707C008FBAEB /* adv.png in Resources */,
 				E25F7C6D223D70B0008FBAEB /* success.png in Resources */,
 				CE82989D1F700B4500BC3C0F /* Main.storyboard in Resources */,
-				CE138186203D953700B61B4B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
