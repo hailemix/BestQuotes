@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BDE204C67D822B565A05F3D4 /* Pods_BestQuotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B997F4A6F861425A45FBE3 /* Pods_BestQuotes.framework */; };
 		CE08980F203622EB000F01BC /* myArray.json in Resources */ = {isa = PBXBuildFile; fileRef = CE08980E203622EB000F01BC /* myArray.json */; };
 		CE138186203D953700B61B4B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE138185203D953700B61B4B /* GoogleService-Info.plist */; };
 		CE4CD4231FC03A0500A748CA /* jiret.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE4CD4211FC02DCA00A748CA /* jiret.ttf */; };
@@ -30,6 +29,7 @@
 		E25F7C6A223D707C008FBAEB /* adv.png in Resources */ = {isa = PBXBuildFile; fileRef = E25F7C69223D707C008FBAEB /* adv.png */; };
 		E25F7C6D223D70B0008FBAEB /* success.png in Resources */ = {isa = PBXBuildFile; fileRef = E25F7C6B223D70B0008FBAEB /* success.png */; };
 		E25F7C6E223D70B0008FBAEB /* thunder.png in Resources */ = {isa = PBXBuildFile; fileRef = E25F7C6C223D70B0008FBAEB /* thunder.png */; };
+		E29D7784223E49C300031EB7 /* Pods_BestQuotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B997F4A6F861425A45FBE3 /* Pods_BestQuotes.framework */; };
 		E7C44C0F5F58C0F680E19058 /* Pods_BestQuotesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C393E0218C0B51D653CFAD6 /* Pods_BestQuotesTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDE204C67D822B565A05F3D4 /* Pods_BestQuotes.framework in Frameworks */,
+				E29D7784223E49C300031EB7 /* Pods_BestQuotes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
