@@ -71,8 +71,8 @@ PODS:
   - Protobuf (3.7.0)
 
 DEPENDENCIES:
-  - Crashlytics
-  - Fabric
+  - Crashlytics (~> 3.12.0)
+  - Fabric (~> 1.9.0)
   - Firebase/AdMob
   - Firebase/Core
   - Firebase/Messaging
@@ -108,6 +108,6 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 7a877b7f3e5964e3fce995e2eb323dbc6831bb5a
 
-PODFILE CHECKSUM: 52e14c6eeefbc78a1588159bf06a534b04b6841f
+PODFILE CHECKSUM: 1601ec7945f138e701b0d18c15e6186f32e5c009
 
 COCOAPODS: 1.6.0

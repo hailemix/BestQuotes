@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMobileAds
+import Crashlytics
 
 
 class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,GADBannerViewDelegate {
@@ -59,7 +60,7 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
         interstitial = createAndLoadInterstitial()
 
     }
-    
+
     func addBannerViewToView(_ bannerView: GADBannerView){
         bannerView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(bannerView)
@@ -133,9 +134,6 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
         activityViewController.popoverPresentationController?.sourceView = (sender)
         activityViewController.excludedActivityTypes = [UIActivity.ActivityType.assignToContact,UIActivity.ActivityType.saveToCameraRoll,UIActivity.ActivityType.copyToPasteboard]
         self.present(activityViewController,animated:true,completion:nil)
-
-    
-        
     }
     
     
@@ -165,9 +163,7 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
                 
                 print("Ad is not ready yet!")
             }
-            
         }
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -177,5 +173,4 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
         self.textView.text = "Your Phone Memory is busy.Please close other apps."
         interstitialForSwipeGesture()
     }
-    
 }

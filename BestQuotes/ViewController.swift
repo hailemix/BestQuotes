@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMobileAds
 
+
 class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UIViewControllerTransitioningDelegate{
     
     @IBOutlet weak var MyCollectionView: UICollectionView!
@@ -29,6 +30,8 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     let gridCellIdentifier = "collectionCell"
     let gridToDetailTransition = TransitionAnimation()
     
+   
+    
     enum jsonError: Error {
         
         case failed(String)
@@ -36,7 +39,6 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         self.MyCollectionView.delegate = self
         self.MyCollectionView.dataSource = self
@@ -46,6 +48,8 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         screenHeight = screenSize.height
         
     }
+    
+
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
@@ -159,7 +163,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             print("There is a problem with index.Please Check the code!")
             
         }
-        
+
         ViewController.images = backgroundImages[imageIndex]
         ViewController.contentDetail = retrieveFromJson()
         
@@ -184,8 +188,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                   if let contentDictionary = myArray as? [String: Any]{
                     
                      contentArray = (contentDictionary[contentString] as? [String])!
-                
-                    
+
                 }
             }
             
@@ -194,14 +197,11 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
              print(jsonError.failed("Failed to Serialize Json file"))
             
         }
-        
         return contentArray
-        
     }
     
-    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){
-       
-    }
+    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){}
+    
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .default
     }
