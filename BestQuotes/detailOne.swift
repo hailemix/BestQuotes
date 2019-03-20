@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMobileAds
 import Crashlytics
+import Fabric
 
 
 class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,GADBannerViewDelegate {
@@ -85,6 +86,7 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .default
     }
+    
     
     @objc func swipeRecognize(gesture : UIGestureRecognizer) {
         
