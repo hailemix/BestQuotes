@@ -10,7 +10,8 @@ import UIKit
 import GoogleMobileAds
 
 
-class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UIViewControllerTransitioningDelegate{
+class ViewController:UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,
+      UIViewControllerTransitioningDelegate {
     
     @IBOutlet weak var MyCollectionView: UICollectionView!
     
@@ -30,8 +31,6 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     let gridCellIdentifier = "collectionCell"
     let gridToDetailTransition = TransitionAnimation()
     
-   
-    
     enum jsonError: Error {
         
         case failed(String)
@@ -48,8 +47,6 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         screenHeight = screenSize.height
         
     }
-    
-
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
