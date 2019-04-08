@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>GADIsAdManagerApp</key>
-	<true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -21,7 +19,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-9156727777369518~9788190845
 ca-app-pub-9156727777369518~9788190845
@@ -29,6 +27,8 @@ ca-app-pub-9156727777369518~9788190845
 ca-app-pub-9156727777369518~9788190845 
 ca-app-pub-9156727777369518~9788190845
 ca-app-pub-9156727777369518~9788190845</string>
+	<key>GADIsAdManagerApp</key>
+	<true/>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>
