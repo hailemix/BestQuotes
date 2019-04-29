@@ -25,6 +25,12 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
     var textIndex = 0
     var interstitial: GADInterstitial!
     static var interstitialCounter = 0
+    var bannerDisplayed = false
+    
+    
+    
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,25 +69,22 @@ class detailOne : UIViewController,UIScrollViewDelegate,GADInterstitialDelegate,
     }
 
     func addBannerViewToView(_ bannerView: GADBannerView){
-        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        bannerDisplayed = true
+        relayoutViews()
         view.addSubview(bannerView)
-        view.addConstraints([
-            NSLayoutConstraint(item: bannerView,
-                               attribute: .bottom,
-                               relatedBy: .equal,
-                               toItem: view,
-                               attribute: .bottom,
-                               multiplier: 1,
-                               constant: -30),
-           NSLayoutConstraint(item: bannerView,
-                              attribute: .centerX,
-                              relatedBy : .equal,
-                              toItem: view,
-                              attribute: .centerX,
-                              multiplier: 1,
-                              constant: 0)
-            ])
             }
+    
+    func relayoutViews(){
+        let screenRect = UIScreen.main.bounds
+        let screenHeight = screenRect.size.height
+        
+        if(bannerDisplayed){
+            var bannerFrame = bannerView!.frame
+            bannerFrame.origin.x = 0
+            bannerFrame.origin.y = screenHeight - bannerFrame.size.height
+            bannerView!.frame = bannerFrame
+        }
+    }
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .default
